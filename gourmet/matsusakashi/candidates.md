@@ -15,14 +15,14 @@
 | 千力 あたご店 | restaurant | 松阪市 | 焼肉 | https://www.google.com/maps/search/?api=1&query=千力あたご店+松阪市 | inbox | - | 食べログ, 観光三重 | A4・A5ランク松阪牛、広い空間 |
 | たこやん | restaurant | 松阪市 | 焼肉・ホルモン | https://www.google.com/maps/search/?api=1&query=たこやん+松阪市 | inbox | - | 観光三重 | 創業1954年、ホルモンが評判 |
 | 快楽亭 | restaurant | 松阪市 | 日本料理・定食 | https://www.google.com/maps/search/?api=1&query=快楽亭+松阪市 | inbox | - | まっぷるウェブ | リーズナブルな定食で松阪牛を味わえる |
-| 松治郎の舗 松阪本店 | dessert | 松阪市 | はちみつスイーツ | https://www.google.com/maps/search/?api=1&query=松治郎の舗松阪本店+松阪市 | inbox | - | 食べログ | はちみつアイス、和洋菓子 |
-| パティスリー・キュルミネ | dessert | 松阪市 | パフェ・ケーキ | https://www.google.com/maps/search/?api=1&query=パティスリーキュルミネ+松阪市 | inbox | - | 食べログ | 季節フルーツパフェ |
+| 松治郎の舗 松阪本店 | dessert | 松阪市中町 | はちみつスイーツ | https://www.google.com/maps/search/?api=1&query=松治郎の舗松阪本店+松阪市 | top | 46 | 食べログ3.6(百名店), Google Maps4.2 | はちみつアイス、和洋菓子。百名店選出 |
+| パティスリー・キュルミネ | dessert | 松阪市 | パフェ・ケーキ | https://www.google.com/maps/search/?api=1&query=パティスリーキュルミネ+松阪市 | shortlisted | 39 | 食べログ3.55, Yahoo4.12 | 季節フルーツパフェ、イートイン限定 |
 | 1010番地 | dessert | 松阪市 | ケーキ | https://www.google.com/maps/search/?api=1&query=1010番地+松阪市 | inbox | - | 食べログ | 賞味期限1時間のミルフィーユ |
 | パティスリー サン・ミッシェル | dessert | 松阪市 | ケーキ | https://www.google.com/maps/search/?api=1&query=パティスリーサンミッシェル+松阪市 | inbox | - | 食べログ, なっぷ | フランス人パティシエ |
 | ANNIVERSARY | dessert | 松阪市 | ケーキ | https://www.google.com/maps/search/?api=1&query=ANNIVERSARY+松阪市 | inbox | - | 食べログ, じゃらん | 栗のタルト、季節ケーキ |
 | pâtisserie andbell | dessert | 松阪市 | ケーキ | https://www.google.com/maps/search/?api=1&query=andbell+松阪市 | inbox | - | なっぷ | 2024年1月オープン |
 | こいさん かき氷研究所 | dessert | 松阪市 | かき氷 | https://www.google.com/maps/search/?api=1&query=こいさんかき氷研究所+松阪市 | inbox | - | なっぷ | 夏限定、三重産素材 |
-| 柳屋奉善 | dessert | 松阪市 | 和菓子 | https://www.google.com/maps/search/?api=1&query=柳屋奉善+松阪市 | inbox | - | なっぷ | 創業440年超、老伴（おいのとも） |
+| 柳屋奉善 | dessert | 松阪市 | 和菓子 | https://www.google.com/maps/search/?api=1&query=柳屋奉善+松阪市 | top | 44 | 食べログ3.4, トリアド4.3 | 創業1575年、老伴（おいのとも）松阪銘菓 |
 | シェニシグチ | cafe | 松阪市 | ケーキプレート | https://www.google.com/maps/search/?api=1&query=シェニシグチ+松阪市 | inbox | - | くふうトリップ | アフタヌーンティー人気 |
 | ブルーミント | cafe | 松阪市 | レトロ喫茶 | https://www.google.com/maps/search/?api=1&query=ブルーミント+松阪市 | inbox | - | くふうトリップ | コーヒーとケーキ |
 | 源芳菓子店 | dessert | 松阪市 | 和菓子 | https://www.google.com/maps/search/?api=1&query=源芳菓子店+松阪市 | inbox | - | じゃらん, なっぷ | みたらし団子、昭和から続く |
