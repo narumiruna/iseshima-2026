@@ -48,14 +48,20 @@ For detailed completion criteria, status definitions, and verification checklist
 
 ## Required Repository Structure (Per City)
 
-Each city directory under `gourmet/`, e.g. `iseshi`, and MUST contain:
+```
+gourmet/ - City food research data
+  [city]/overview.md - City food strategy and progress
+  [city]/candidates.md - Candidate restaurants and ratings
+  [city]/top-places.md - Final recommendation list
+  [city]/excluded.md - Excluded places and reasons
+```
 
-- overview.md  
-- inbox.md  
-- candidates.md  
-- notes.md  
-- top-places.md  
-- excluded.md  
+Each city directory under `gourmet/` (e.g., `iseshi`, `matsusakashi`, `tobashi`, `shimashi`) MUST contain:
+
+- overview.md - City food strategy and progress
+- candidates.md - Candidate restaurants and ratings
+- top-places.md - Final recommendation list
+- excluded.md - Excluded places and reasons
 
 Agents MUST respect this structure and naming.
 
@@ -89,33 +95,22 @@ overview.md       ← START HERE: Context, strategy, progress at a glance
     ↓
 top-places.md     ← ACTIONABLE: Final recommendations with scores
     ↓
-candidates.md     ← SUMMARY: Quick scan table with scores and status
-    ↓
-notes.md          ← EVIDENCE: Detailed research notes, sources, and rationale
-    ↓
-inbox.md          ← RAW DATA: Unstructured capture, exploration notes
+candidates.md     ← COMPLETE: All candidates with detailed evidence and ratings
     ↓
 excluded.md       ← REJECTED: What was considered and why it was excluded
 ```
 
 **Each file serves a distinct purpose**:
-- **overview.md**: Quick orientation (5-minute read)
-- **top-places.md**: Decision-making (10-minute read, includes dining strategy)
-- **candidates.md**: Summary table (quick scan, 5-10 minutes, shows all candidates with scores and status)
-- **notes.md**: Detailed evidence (deep dive, 30+ minutes, full research trail for each place)
-- **inbox.md**: Working space (exploratory, always in flux)
-- **excluded.md**: Audit trail (transparency, prevents re-research)
+- **overview.md**: Quick orientation (5-minute read) - City food strategy and progress
+- **top-places.md**: Decision-making (10-minute read, includes dining strategy) - Final recommendation list
+- **candidates.md**: Complete research (shows all candidates with scores, evidence, and status) - Candidate restaurants and ratings
+- **excluded.md**: Audit trail (transparency, prevents re-research) - Excluded places and reasons
 
 #### Within-Document Disclosure
 
 **In candidates.md**:
-1. **Summary table only** (name, category, area, type, google_maps_url, status, sources, notes) → quick scan
-2. **No detailed sections** - these belong in notes.md
-3. **Brief notes column** - one-line summary per place (Traditional Chinese)
-
-**In notes.md**:
-1. **Detailed evidence sections** per place → deep research trail
-2. **Source citations** with URLs → full traceability
+1. **Quick reference table at top** (name, category, area, type, google_maps_url, status, score) → quick scan
+2. **Detailed evidence sections per place** below the table → full research trail with sources
 3. **Scoring rationale** → justification for each score component
 4. **Practical information** → reservation, queues, closed days, etc.
 
@@ -130,6 +125,11 @@ excluded.md       ← REJECTED: What was considered and why it was excluded
 2. **Food highlights** → city-specific focus
 3. **Strategy** → research approach
 4. **Progress checklist** → current status
+
+**In excluded.md**:
+1. **Exclusion reason categories** → organized by reason type
+2. **Brief explanation per place** → why it was excluded
+3. **Source references** → evidence for exclusion decision
 
 ### Guidelines for Agents
 
@@ -234,23 +234,23 @@ When starting research for a new city:
 
 **inbox.md structure recommendation**:
 ```
-## Category (e.g., すき焼き)
-1. **Place Name**
-   - Location: area
-   - Highlights: key dishes/unique features
-   - Notes: constraints
-   - Sources: source type
+## カテゴリー (e.g., すき焼き)
+1. **店舗名**
+   - 所在地：エリア
+   - 特徴：代表的な料理／独自の特徴
+   - 注意点：制約事項
+   - 情報源：情報源の種類
 ```
 
 Minimum fields per candidate in candidates.md table:
 - name
 - category (restaurant | cafe | dessert)
 - area / neighborhood
-- type (e.g. pasta, steak, espresso, gelato)
+- type (e.g., pasta, steak, espresso, gelato)
 - google_maps_url (use search link initially, replace with exact link when researched)
 - status: inbox | researching | shortlisted | rejected | top
 - sources (brief: e.g., "Tripadvisor, Reddit, Michelin")
-- notes (Traditional Chinese, brief summary)
+- notes (brief summary)
 
 **Prioritization**: Focus on 3-5 top candidates first, then expand. Don't try to research everything at once.
 
@@ -272,8 +272,8 @@ Minimum fields per candidate in candidates.md table:
 
 **Correct workflow for unwanted candidates:**
 1. Keep entry in candidates.md table with `status: rejected`
-2. Add detailed reason to excluded.md under "未進一步研究的候選 (Not Researched Further)" or similar section
-3. Explain why it was not researched (e.g., "已有足夠推薦", "優先級較低", "地點過遠")
+2. Add detailed reason to excluded.md under "Not Researched Further" or similar section
+3. Explain why it was not researched (e.g., "already have enough recommendations", "lower priority", "location too far")
 
 **Why this matters:**
 - Preserves research trail and avoids duplicate work
@@ -284,7 +284,7 @@ Minimum fields per candidate in candidates.md table:
 **When recovering deleted entries:**
 - If entries were accidentally deleted, restore them to the table
 - Add detailed research sections if available
-- Update excluded.md to remove them from "未進一步研究" if they are now researched
+- Update excluded.md to remove them from "Not Researched Further" if they are now researched
 
 ---
 
@@ -323,7 +323,7 @@ Rules:
 ```
 ### [Place Name]
 
-**Official**: [website URL or "無官方網站"]
+**Official**: [website URL or "no official website"]
 
 **Google Maps**: X.X/5 (Y reviews)
 
@@ -374,7 +374,7 @@ Each researched place MUST include a 50-point total score:
 
 Also record:
 - reservation requirement (required | recommended | optional | none | unknown)
-- best visiting time (specific times or "off-peak" etc.)
+- best visiting time (specific times or "off-peak", etc.)
 - closed days (especially Sunday/Monday)
 - queue expectations (if no reservation)
 
@@ -429,7 +429,7 @@ Each entry MUST include:
   - Search API links: `https://www.google.com/maps/search/?api=1&query=[Place+Name+City]`
   - Place links: `https://www.google.com/maps/place/[Place+Name]`
 - Links MUST be tested/verified to point to the correct location
-- Generic placeholders like `[查看地圖]` or `[View Map]` without proper URLs are NOT acceptable
+- Generic placeholders like `[View Map]` without proper URLs are NOT acceptable
 
 **Additional sections to include**:
 - Dining Strategy:
@@ -459,9 +459,9 @@ Each entry MUST include:
    - Update PROGRESS.md with current status (primary source of truth)
    - Sync README.md progress table to match PROGRESS.md
    - Use accurate status icon based on completion criteria:
-     - ⏳ 未開始 → 📝 研究中 → 🔄 待完成 → ✅ 已完成
+     - ⏳ Not Started → 📝 In Progress → 🔄 Needs Finalization → ✅ Completed
    - Only use ✅ when ALL completion criteria are met
-   - Update 重點推薦 count
+   - Update recommendation count
    - Add relevant notes about research completion
 
 3. **Update AGENTS.md if workflow improved**:
@@ -520,8 +520,7 @@ For a new city:
 - Use English for structured fields and keys
 - Dates must follow ISO format (YYYY-MM-DD)
 - Unknown information must be labeled as `unknown`
-- Place filenames MUST follow:
-  <city>-<normalized-place-name>.md
+- Place filenames MUST follow the format: `<city>-<normalized-place-name>.md`
 
 ---
 
