@@ -1,382 +1,439 @@
-# Instructions for Agents
+# Agent Operational Constraints
 
-## Main Purpose (Immutable)
+## SECTION 1: IMMUTABLE CONSTRAINTS
 
-- The main purpose of this project is to plan a trip from 2026-09-25 to 2026-10-04, especially focusing on food.
-- All flights, trains, and accommodations have already been booked and are FINAL.
-- 調査対象エリア：
-  - 伊勢市
-  - 松阪市
-  - 鳥羽市
-  - 志摩市
-- 過去に訪問したことのあるレストラン（参考情報）：
-  - 和田金
-  - 一月家
-  - 豚捨
-  - 一升びん
+These constraints MUST NOT be violated under any circumstances. Agents MUST halt and request clarification if any action would violate these constraints.
 
-## Agent Mission
+### 1.1 Project Scope (IMMUTABLE)
 
-Build and maintain a **high-quality, evidence-based food shortlist** for each city, covering:
-- Restaurants
-- Cafes
-- Dessert shops
+**Travel Dates**: 2026-09-25 to 2026-10-04
+**Trip Type**: Food-focused research trip
+**Target Areas**: 伊勢市, 松阪市, 鳥羽市, 志摩市
 
-All recommendations must be:
-- Traceable (sources linked)
-- Comparable (shared scoring rubric)
-- Auditable (decisions and exclusions recorded)
-- Actionable (clear top picks and backups)
+**IMMUTABLE FACT**: All flights, trains, and accommodations are FINAL and CANNOT be changed.
+
+**Reference Data** (Previously visited restaurants - for context only):
+- 和田金, 一月家, 豚捨, 一升びん
+
+### 1.2 Primary Objective (IMMUTABLE)
+
+Build and maintain a **high-quality, evidence-based food shortlist** for each target city.
+
+**Scope includes**: Restaurants, cafes, dessert shops
+**Scope excludes**: Accommodations, transportation, non-food activities
+
+**Output Requirements** (MANDATORY):
+- Every recommendation MUST be traceable (sources linked)
+- Every recommendation MUST be comparable (scored using standard rubric)
+- Every decision MUST be auditable (recorded with rationale)
+- Every output MUST be actionable (clear recommendations with constraints)
+
+### 1.3 Mandatory Repository Structure (IMMUTABLE)
+
+Each city directory under `gourmet/` MUST contain exactly 5 files with these exact names:
+
+```
+gourmet/[city]/overview.md     - City strategy and progress tracking
+gourmet/[city]/candidates.md   - All candidate restaurants (table format)
+gourmet/[city]/top-places.md   - Final recommendations only
+gourmet/[city]/excluded.md     - Rejected candidates with reasons
+gourmet/[city]/notes.md        - Detailed evidence and research
+```
+
+**Enforcement**:
+- Agents MUST NOT create files outside this structure
+- Agents MUST NOT rename these files
+- Agents MUST NOT merge these files
+- Agents MUST NOT delete these files
+
+### 1.4 Language Rules (IMMUTABLE)
+
+- `AGENTS.md` MUST be primarily in English
+- `PROGRESS.md` MUST be primarily in English
+- All other documentation MUST be primarily in Japanese
+- Structured field names and keys MUST use English
+- Dates MUST follow ISO 8601 format (YYYY-MM-DD)
+
+### 1.5 Data Integrity Rules (IMMUTABLE)
+
+**Fabrication Prohibition**:
+- Agents MUST NOT fabricate reviews, ratings, or facts
+- If information is unavailable, agents MUST use `unknown`
+- If information conflicts, agents MUST document the conflict
+
+**Deletion Prohibition**:
+- Agents MUST NOT delete candidate entries from candidates.md table without explicit user approval
+- Permitted deletions: duplicates, incorrect entries, confirmed closures, explicit user instruction
+- All other unwanted candidates MUST be marked `status: rejected` with reason in excluded.md
+
+**Source Attribution**:
+- Every claim MUST include source URL
+- Agents MUST distinguish between reported facts and synthesis
+- Agents MUST NOT attribute synthesized content to sources
 
 ---
 
-## Research Completion Standard
+## SECTION 2: PERMISSION MODEL
 
-For detailed completion criteria, status definitions, and verification checklists, see [PROGRESS.md](PROGRESS.md).
+### 2.1 Explicit Permission Policy
 
-**Quick Reference:**
-- A city is marked "✅" when ALL of the following are met:
-  1. All candidates triaged (no `status: inbox` in candidates.md)
-  2. No pending decisions in excluded.md
-  3. top-places.md finalized (Top Picks, Backups, Dining Strategy, To-Do)
-  4. overview.md checklist fully checked `[x]`
+**Default Rule**: If a permission is not explicitly granted in this document, it is DENIED.
 
-**Important Distinction - Two Types of Checklists:**
+**Agent Behavior on Permission Denial**:
+1. MUST halt the action
+2. MUST inform user of denied action
+3. MUST request explicit permission to proceed
 
-1. **Research Completion Checklist** (overview.md):
-   - Tracks research progress (data collection, analysis, documentation)
-   - MUST be 100% checked `[x]` for city to be marked "✅ Completed"
-   - Managed by research agents
+**Past context, user preferences, or "common sense" MUST NOT override this document.**
 
-2. **Trip Execution Checklist** (top-places.md To-Do section):
-   - Tracks trip planning and execution tasks (reservations, confirmations)
-   - MAY contain unchecked items `[ ]` even when research is complete
-   - Used by travelers for trip preparation
-   - NOT part of research completion criteria
+### 2.2 Granted Permissions
 
-**Status Indicators:**
-- ⏳ Not Started → 📝 In Progress → 🔄 Needs Finalization → ✅ Completed
+Agents ARE explicitly permitted to:
+- Create and update the 5 mandatory files per city
+- Update PROGRESS.md to reflect research status
+- Update README.md progress table (synchronizing with PROGRESS.md)
+- Use web_search tool to gather restaurant information
+- Mark candidates with status: inbox | researching | shortlisted | rejected | top
+- Add entries to excluded.md with documented reasons
+- Assign scores using the standard 50-point rubric
+- Update AGENTS.md "Process Improvements" section when discovering better workflows
 
----
+### 2.3 Conditional Permissions
 
-## Required Repository Structure (Per City)
+Agents MAY perform these actions ONLY under specified conditions:
 
-```
-gourmet/ - City food research data
-  [city]/overview.md - City food strategy and progress
-  [city]/candidates.md - Candidate restaurants and ratings
-  [city]/top-places.md - Final recommendation list
-  [city]/excluded.md - Excluded places and reasons
-  [city]/notes.md - Detailed evidence and research notes
-```
+**Update AGENTS.md** (Conditional):
+- Permitted ONLY in "Process Improvements (Lessons Learned)" section
+- Permitted ONLY when documenting verified workflow improvements
+- MUST NOT modify constraint sections without explicit user approval
 
-Each city directory under `gourmet/` (e.g., `iseshi`, `matsusakashi`, `tobashi`, `shimashi`) MUST contain:
+**Mark city as "✅ Completed"** (Conditional):
+- Permitted ONLY when ALL completion criteria verified (see Section 3.2)
+- MUST run verification commands before marking complete
+- MUST document completion in PROGRESS.md
 
-- overview.md - City food strategy and progress
-- candidates.md - Candidate restaurants and ratings
-- top-places.md - Final recommendation list
-- excluded.md - Excluded places and reasons
-- notes.md - Detailed evidence and research notes
+### 2.4 Denied Permissions
 
-Agents MUST respect this structure and naming.
-
-**All documentation must follow the Progressive Disclosure Principle** (see dedicated section below for details).
+Agents MUST NOT:
+- Change travel dates, accommodations, or transportation
+- Research or recommend activities outside food/dining
+- Create additional files beyond the 5 mandatory files per city
+- Delete files from repository
+- Modify immutable constraint sections in AGENTS.md
+- Override scoring rubric or completion criteria
+- Proceed with assumptions when critical information is missing
 
 ---
 
-## Progressive Disclosure Principle
+## SECTION 3: OPERATIONAL STANDARDS
 
-**Progressive disclosure** is a design principle where information is revealed gradually, showing only what's necessary at each stage while providing paths to deeper detail when needed.
+### 3.1 Research Completion Definition
 
-### Why This Matters
 
-In this project:
-- **Travelers need quick answers** (e.g., "What are the top 3-5 places for dinner?")
-- **But decisions require justification** (e.g., "Why did you exclude Restaurant X?")
-- **Research depth varies** (quick scan → detailed investigation → deep dive)
+**Deterministic Completion Criteria**: A city research is complete when ALL of the following are TRUE:
 
-Progressive disclosure prevents:
-- ❌ Overwhelming users with all details upfront
-- ❌ Hiding critical information too deeply
-- ❌ Making quick decisions difficult
-- ❌ Losing traceability of research rationale
+1. `grep "status: inbox" gourmet/[city]/candidates.md` returns NO results
+2. `grep -i "TODO\|pending" gourmet/[city]/excluded.md` returns NO results
+3. `grep -E "^## (Top Picks|Backups|Dining Strategy|To-Do)" gourmet/[city]/top-places.md` returns ALL 4 sections
+4. `grep "\- \[ \]" gourmet/[city]/overview.md` returns NO unchecked items
 
-### How We Apply It
+**Status Progression**: ⏳ Not Started → 📝 In Progress → 🔄 Needs Finalization → ✅ Completed
 
-#### File Structure (Layered Information)
+**Stopping Condition**: Agents MUST NOT mark a city as "✅ Completed" unless all 4 verification commands pass.
 
-```
-overview.md       ← START HERE: Context, strategy, progress at a glance
-    ↓
-top-places.md     ← ACTIONABLE: Final recommendations with scores
-    ↓
-candidates.md     ← COMPLETE: All candidates with scores and status
-    ↓
-notes.md          ← EVIDENCE: Detailed research evidence and scoring rationale
-    ↓
-excluded.md       ← REJECTED: What was considered and why it was excluded
-```
+### 3.2 Distinction: Research vs. Execution Checklists
 
-**Each file serves a distinct purpose**:
-- **overview.md**: Quick orientation (5-minute read) - City food strategy and progress
-- **top-places.md**: Decision-making (10-minute read, includes dining strategy) - Final recommendation list
-- **candidates.md**: Complete research (shows all candidates with scores and status) - Candidate restaurants and ratings
-- **notes.md**: Detailed evidence (research trail with sources, scoring rationale) - Detailed evidence and research notes
-- **excluded.md**: Audit trail (transparency, prevents re-research) - Excluded places and reasons
+**CRITICAL**: Two separate checklists exist with different completion rules:
 
-#### Within-Document Disclosure
+| Aspect | Research Completion (overview.md) | Trip Execution (top-places.md) |
+|--------|-----------------------------------|--------------------------------|
+| Purpose | Track research progress | Track trip planning actions |
+| Managed by | Research agents | Travelers |
+| Completion requirement | MUST be 100% checked `[x]` for "✅ Completed" status | MAY contain unchecked `[ ]` items even when research complete |
+| Affects status | YES - blocks "✅ Completed" status | NO - does not affect research status |
 
-**In candidates.md**:
-1. **Quick reference table at top** (name, category, area, type, google_maps_url, status, score) → quick scan
-2. **Brief summary in notes column** → high-level overview per place
+**Stopping Condition**: Agents MUST verify overview.md checklist is 100% complete before marking city as "✅ Completed". Agents MUST NOT wait for top-places.md To-Do items to be checked.
 
-**In notes.md**:
-1. **Detailed evidence sections per place** → full research trail with sources
-2. **Scoring rationale** → justification for each score component
-3. **Practical information** → reservation, queues, closed days, etc.
-
-**In top-places.md**:
-1. **Top Picks** first (35+ scores) → immediate action
-2. **Backups** second (30-34 scores) → alternatives if needed
-3. **Dining Strategy** → logistics and planning
-4. **To-Do items** → execution checklist
-
-**In overview.md**:
-1. **Travel info** → immediate context
-2. **Food highlights** → city-specific focus
-3. **Strategy** → research approach
-4. **Progress checklist** → current status
-
-**In excluded.md**:
-1. **Exclusion reason categories** → organized by reason type
-2. **Brief explanation per place** → why it was excluded
-3. **Source references** → evidence for exclusion decision
-
-### Guidelines for Agents
-
-When creating or updating documentation:
-
-1. **Start with the answer, then justify**
-   - ✅ "Top Pick: Restaurant X (42/50) - Exceptional pasta, reliable service"
-   - ❌ "After reviewing 15 sources and analyzing 200 reviews... Restaurant X"
-
-2. **Use visual hierarchy**
-   - Headers, scores, and key facts should stand out
-   - Details should be scannable (bullets, short paragraphs)
-   - Full evidence goes in expandable sections or separate files
-
-3. **Link, don't duplicate**
-   - overview.md references top-places.md
-   - top-places.md links to candidates.md for quick scan
-   - candidates.md table rows can reference notes.md for detailed evidence
-   - Avoid copying the same information into multiple files
-
-4. **Respect the reader's journey**
-   - Someone planning their day → starts at top-places.md
-   - Someone wanting a quick overview → checks candidates.md table
-   - Someone questioning a score → digs into notes.md for evidence
-   - Someone auditing research → checks excluded.md
-
-5. **Maintain traceability without overwhelming**
-   - Every score must be justifiable (in notes.md)
-   - Every top pick must have evidence (sources in notes.md)
-   - But candidates.md and top-places.md stay concise with summary info only
-
-### Anti-Patterns to Avoid
-
-- ❌ Putting all research in one massive file
-- ❌ Mixing summary tables with detailed evidence in candidates.md
-- ❌ Hiding final recommendations deep in notes
-- ❌ Forcing readers to read everything to find actionable info
-- ❌ Removing audit trails (deleted places, score changes)
-- ❌ Creating too many layers (more than 6 files per city)
-
-### Example Flow
-
-**Quick Trip Planning (5 minutes)**:
-```
-README.md → [select city] → top-places.md → Done
-```
-
-**Quick Candidate Scan (10 minutes)**:
-```
-candidates.md → Scan table with scores and status → Identify priorities
-```
-
-**Reservation Planning (15 minutes)**:
-```
-top-places.md → Check constraints → Make reservations → Update To-Do
-```
-
-**Deep Research Review (1 hour)**:
-```
-overview.md → top-places.md → candidates.md → notes.md → Check all sources → Validate scores
-```
-
-**Investigating an Exclusion (5 minutes)**:
-```
-excluded.md → Find place → Read reason → (Optional: check notes.md for full details)
-```
+For detailed verification procedures, see PROGRESS.md.
 
 ---
 
-## Workflow (Must Follow)
+## SECTION 4: PROGRESSIVE DISCLOSURE ARCHITECTURE
 
-### 0 Initialize City Research
+### 4.1 Information Hierarchy (MANDATORY)
+
+Files MUST be structured to support this access pattern:
+
+```
+Level 1: overview.md       → 5-minute orientation (context, strategy, status)
+Level 2: top-places.md     → 10-minute decision-making (final recommendations)
+Level 3: candidates.md     → 15-minute complete view (all candidates, scores, status)
+Level 4: notes.md          → Deep dive (full evidence, sources, scoring rationale)
+Level 5: excluded.md       → Audit trail (what was rejected and why)
+```
+
+**Enforcement**: Each level MUST be readable without requiring access to deeper levels. Agents MUST NOT force readers to navigate all levels to get actionable information.
+
+### 4.2 Content Placement Rules
+
+**top-places.md** (Decision Layer):
+- MUST include: name, type, area, score, Google Maps URL, Tabelog URL, justification, constraints
+- MUST NOT include: detailed evidence, full source list, review summaries
+- Organization: Top Picks (score 35+) → Backups (score 30-34) → Dining Strategy → To-Do
+
+**candidates.md** (Complete View):
+- MUST include: Quick reference table at top with all candidates
+- Table columns: name, category, area, type, google_maps_url, status, score, sources (brief), notes (brief)
+- MUST NOT include: Full evidence sections, detailed review analysis
+
+**notes.md** (Evidence Layer):
+- MUST include: Detailed evidence section per place with all sources
+- MUST include: Scoring breakdown with justification
+- MUST include: Practical information (reservation, queues, closed days)
+
+**excluded.md** (Rejection Layer):
+- MUST include: Organized by exclusion reason category
+- MUST include: Brief explanation per excluded place
+- MUST include: Source references for exclusion decision
+
+### 4.3 Anti-Patterns (PROHIBITED)
+
+Agents MUST NOT:
+- Put all research in one massive file
+- Mix summary tables with detailed evidence in candidates.md
+- Hide final recommendations deep in notes.md
+- Force readers to read all files to find actionable information
+- Remove audit trails (deleted places, score changes)
+- Create more than 6 files per city
+- Duplicate identical information across multiple files (use links instead)
+
+---
+
+## SECTION 5: EVIDENCE AND SCORING REQUIREMENTS
+
+### 5.1 Minimum Evidence Standard (MANDATORY)
+
+For each researched place, agents MUST collect evidence from at least 4 independent sources:
+
+**Required sources** (all 4 mandatory):
+1. Google Maps (rating, review count, recurring pros/cons)
+2. 食べログ (Tabelog) (rating, review count, area ranking, price range)
+3. Google口コミ (Japanese Google reviews - summarize patterns)
+4. At least one reputable guide (Michelin, local food blogs, TimeOut, etc.)
+
+**Optional sources** (strengthen case):
+- Retty (レッティ), Hot Pepper Gourmet (ホットペッパーグルメ)
+- PTT, Dcard, Chinese-language travel blogs (must cite clearly)
+- Social media aggregated mentions (TikTok, Instagram)
+
+**Stopping Condition**: Agents MUST NOT proceed to scoring until minimum 4 sources collected.
+
+### 5.2 Tabelog Ranking Requirements (MANDATORY)
+
+For every candidate, agents MUST:
+- Search for Tabelog score and area ranking
+- Document score (0-5.0 scale) and review count
+- Note area ranking if available (e.g., "伊勢市 うどん部門 3位")
+- Distinguish between Tabelog score (monthly) and 百名店 (annual award)
+
+**Score interpretation** (for reference):
+- 4.0+ = Exceptional (only 0.07% of restaurants)
+- 3.5-3.9 = Excellent
+- 3.0-3.4 = Good
+- Below 3.0 = Consider carefully
+
+### 5.3 Scoring Rubric (MANDATORY)
+
+Each researched place MUST receive a score using this exact rubric:
+
+| Dimension | Range | Definition |
+|-----------|-------|------------|
+| Taste / Quality | 0-10 | Food quality, authenticity, execution |
+| Value | 0-10 | Price vs quality, portion size |
+| Convenience | 0-10 | Location, reservation ease, opening hours |
+| Consistency | 0-10 | Reliability across reviews, time, visits |
+| Risk | 0-10 | 10 = low risk; likelihood of disappointment, queue uncertainty, service issues |
+
+**Total**: 0-50 points
+
+**Score interpretation**:
+- 40+ = Excellent, highly recommended
+- 35-39 = Very good, solid choice
+- 30-34 = Good, acceptable backup
+- &lt;30 = Consider exclusion (requires justification)
+
+**Enforcement**: Every score MUST be justifiable from collected evidence. Agents MUST document scoring rationale in notes.md.
+
+### 5.4 Practical Information (MANDATORY)
+
+For each researched place, agents MUST document:
+- **reservation requirement**: required | recommended | optional | none | unknown
+- **best visiting time**: specific times or "off-peak" or unknown
+- **closed days**: specific days (especially Sunday/Monday) or unknown
+- **queue expectations**: if no reservation system
+
+**Stopping Condition**: Agents MUST NOT mark a place as "researched" until all 4 practical fields are populated (even if value is `unknown`).
+
+---
+
+## SECTION 6: DECISION BOUNDARIES
+
+### 6.1 When to Request Clarification (MANDATORY)
+
+Agents MUST halt and request user clarification when:
+- Evidence for a place is contradictory (e.g., one source says "excellent", another says "tourist trap")
+- A candidate falls exactly at score threshold (e.g., exactly 30 points)
+- User instruction conflicts with this document
+- Attempting an action not explicitly permitted in Section 2
+- Uncertainty about whether to research more candidates vs. finalize
+- Found potentially duplicate entries but cannot confirm identity
+
+**Prohibited**: Agents MUST NOT "assume" user intent or make implicit inferences to bypass clarification.
+
+### 6.2 When to Proceed with Documented Assumptions
+
+Agents MAY proceed with assumptions ONLY when:
+- Information is truly unavailable after searching 4+ sources (mark as `unknown`)
+- Need to prioritize candidates (document prioritization criteria used)
+- Interpreting ambiguous reviews (mark as "interpretation" in notes.md)
+
+**Requirement**: Agents MUST explicitly document all assumptions in notes.md.
+
+### 6.3 Exclusion Decision Boundaries (DETERMINISTIC)
+
+**Hard Exclusion** (agents MAY exclude without user approval):
+- Strong multi-source signals of tourist traps
+- Repeated hygiene or safety concerns across multiple sources
+- Repeated severe service issues across multiple sources
+- Score &lt; 30 with documented justification
+
+**Soft Exclusion** (agents SHOULD request user confirmation):
+- Score exactly 30
+- Mixed signals (some excellent reviews, some poor)
+- Place is outside target areas but nearby
+- Candidate has potential but insufficient evidence
+
+**Procedure**: Mark as `status: rejected`, document reason in excluded.md, keep entry in candidates.md table.
+
+### 6.4 Research Stopping Conditions
+
+Agents MUST stop researching new candidates when:
+- City has 5-10 Top Picks (score 35+) AND 3-5 Backups (score 30-34)
+- All target food categories covered (casual, special occasion, dessert)
+- Geographic spread achieved across city neighborhoods
+- Time allocation exhausted (see Section 7.4)
+
+Agents MAY continue researching if:
+- User explicitly requests more candidates
+- Significant gaps in category or geographic coverage
+- Top pick count below 5
+
+---
+
+## SECTION 7: WORKFLOW (PROCEDURAL)
+
+
+**Note**: This section contains procedural guidance. Agents MUST follow Section 1-6 constraints while executing these procedures.
+
+### 7.1 Initialization Procedure
+
 
 When starting research for a new city:
 
-1. **Create overview.md first** with:
-   - Travel dates and accommodation
-   - Food highlights specific to the city (e.g., Roman pasta, Viennese schnitzel)
-   - Research strategy and priorities
-   - Current progress checklist
-   - Important notes (business hours, holidays, transportation from hotel)
+**Step 1**: Create overview.md with:
+- Travel dates and accommodation
+- Food highlights specific to the city
+- Research strategy and priorities
+- Progress checklist (initially unchecked)
+- Important notes (business hours, holidays, transportation)
 
-2. **Use web_search to gather initial candidates**:
-   - Search for "best [city cuisine] restaurants [year]"
-   - Search for specific dishes (e.g., "best carbonara Rome")
-   - Search for "best pizza/gelato/dessert in [city]"
-   - Focus on recent guides (2024-2026) and local recommendations
+**Step 2**: Use web_search to gather initial candidates (batch searches):
+- "[city cuisine] restaurants [year]"
+- "best [specific dish] [city]"
+- "best [dessert/gelato] [city]"
+- Focus on 2024-2026 guides and local recommendations
 
-3. **Batch similar searches** to save time:
-   - Do one search for restaurants
-   - One search for pizza/casual dining
-   - One search for desserts/gelato
+**Step 3**: Populate candidates.md with initial findings
+- Use inbox.md for rapid unstructured capture if needed
+- Transfer to candidates.md structured table
+- Mark all as `status: inbox` initially
 
----
+### 7.2 Discovery Procedure
 
-### 1 Discovery — Candidate Collection
 
-- Search broadly for food, coffee, and dessert places in the city.
-- Record raw findings in:
-  - inbox.md (unstructured, fast capture with quick notes)
-  - and/or candidates.md (structured table)
+**Objective**: Collect candidate places broadly without deep research.
 
-**inbox.md structure recommendation**:
-```
-## カテゴリー (e.g., すき焼き)
-1. **店舗名**
-   - 所在地：エリア
-   - 特徴：代表的な料理／独自の特徴
-   - 注意点：制約事項
-   - 情報源：情報源の種類
-```
+**Procedure**:
+1. Search broadly for food, coffee, and dessert places in the city
+2. Record findings in candidates.md structured table
+3. Optional: Use inbox.md for rapid unstructured capture, then migrate to candidates.md
 
-Minimum fields per candidate in candidates.md table:
-- name
-- category (restaurant | cafe | dessert)
-- area / neighborhood
-- type (e.g., pasta, steak, espresso, gelato)
-- google_maps_url (use search link initially, replace with exact link when researched)
-- status: inbox | researching | shortlisted | rejected | top
-- sources (brief: e.g., "食べログ, Google Maps, Michelin")
-- notes (brief summary)
+**candidates.md minimum required fields**:
+- name, category (restaurant | cafe | dessert), area, type, google_maps_url, status, sources (brief), notes (brief)
+- Initially: use generic Google Maps search link, replace with direct link during research
+- Initially: mark as `status: inbox`
 
-**Prioritization**: Focus on 3-5 top candidates first, then expand. Don't try to research everything at once.
+**Prioritization rule**: Focus on 3-5 top candidates first, then expand. Do not research everything simultaneously.
 
-**⚠️ CRITICAL: Preserving candidates.md Table Entries**
+**CRITICAL ENFORCEMENT** (see Section 1.5):
+- DO NOT delete entries from candidates.md table except: duplicates, incorrect info, confirmed closures, user instruction
+- For unwanted candidates: mark `status: rejected` + document in excluded.md
+- Rationale: Preserve research trail, avoid duplicate work, maintain audit trail
 
-**DO NOT delete or remove entries from the candidates.md summary table** unless absolutely necessary for one of the following reasons:
+### 7.3 Evidence Collection Procedure
 
-**Acceptable reasons to modify/remove table entries:**
-1. **Duplicate entries**: Same restaurant appears multiple times in table (merge into one entry with combined information)
-2. **Incorrect information**: Restaurant name, location, or category is wrong and needs correction
-3. **Restaurant permanently closed**: Confirmed closure (must note in excluded.md)
-4. **Explicit instruction**: User specifically requests removal
+**Objective**: Collect comprehensive evidence for priority candidates (see Section 5.1 for requirements).
 
-**NEVER remove entries because:**
-- ❌ They are not yet researched (keep as `status: inbox`)
-- ❌ They seem lower priority (move to excluded.md with reason instead)
-- ❌ There are already enough candidates (document decision in excluded.md)
-- ❌ You think they won't be needed (let user decide; move to excluded.md if appropriate)
+**Procedure for each candidate**:
+1. Change status to `status: researching`
+2. Execute targeted web_search: "[Restaurant Name] [City] 食べログ 予約 口コミ"
+3. Collect minimum 4 sources (Google Maps, 食べログ, Google口コミ, Guide)
+4. Create detailed evidence section in notes.md
+5. Update candidates.md table row with brief summary
+6. Mark status as `status: shortlisted` or `status: rejected`
 
-**Correct workflow for unwanted candidates:**
-1. Keep entry in candidates.md table with `status: rejected`
-2. Add detailed reason to excluded.md under "Not Researched Further" or similar section
-3. Explain why it was not researched (e.g., "already have enough recommendations", "lower priority", "location too far")
+**Efficient pattern**:
+- One well-crafted search often provides Google Maps, 食べログ, and Google口コミ data together
+- Extract systematically: ratings → pros → cons → practical info
+- Document full evidence in notes.md; only summary in candidates.md
 
-**Why this matters:**
-- Preserves research trail and avoids duplicate work
-- Maintains audit trail of all candidates considered
-- Prevents accidental loss of potentially valuable options
-- Allows user to see full scope of research
-
-**When recovering deleted entries:**
-- If entries were accidentally deleted, restore them to the table
-- Add detailed research sections if available
-- Update excluded.md to remove them from "Not Researched Further" if they are now researched
-
----
-
-### 2 Evidence Collection — Per Place
-
-For each candidate promoted to research:
-- Add a detailed evidence section in `notes.md` (keep it skimmable; link sources).
-- Update the candidates.md table row with brief summary in notes column.
-- Summarize evidence from multiple independent sources.
-
-**Efficient research pattern**:
-1. Use web_search with specific queries: "[Restaurant Name] [City] 食べログ 予約 口コミ"
-2. One search often provides Google Maps rating, 食べログ reviews, and Google口コミ together
-3. Extract key information systematically
-4. Document full evidence in notes.md, update candidates.md table with status and brief summary
-
-**Tabelog Ranking (食べログランキング)**:
-- **Always check Tabelog ranking**: Search for "[City] [cuisine type] 食べログ ランキング" or check the restaurant's Tabelog page for its score and area ranking
-- **Tabelog Score System**:
-  - Score range: 0-5.0 (updated twice monthly based on user reviews)
+**Tabelog Ranking** (MANDATORY - see Section 5.2):
+- Always check Tabelog score (0-5.0 scale) and area ranking
+- Document score, review count, and area ranking if available
+- Tabelog Score System:
   - 4.0+ = Exceptional (only 0.07% of restaurants)
   - 3.5-3.9 = Excellent, highly recommended
   - 3.0-3.4 = Good, worth visiting
   - Below 3.0 = Consider carefully
-- **How to use rankings**:
-  - Check both the absolute score and the ranking within the city/area
-  - Example searches: "伊勢 うどん 食べログ ランキング", "伊勢市 海鮮 食べログ"
-  - Look for restaurants in top rankings for their category in the area
-  - Consider review count - more reviews = more reliable score
-- **Note**: Tabelog ranking (score-based, updated monthly) is DIFFERENT from 百名店 (annual award)
+- Search examples: "伊勢 うどん 食べログ ランキング", "伊勢市 海鮮 食べログ"
+- Note: Tabelog ranking (score-based, updated monthly) is DIFFERENT from 百名店 (annual award)
 
-Required source types:
-- Google Maps (rating, review count, recurring pros/cons)
-- 食べログ (Tabelog) (rating, review count, detailed scoring)
-- Google口コミ (Google Reviews in Japanese; summarize patterns from local reviewers)
-- One or more reputable food or travel guides (Michelin Guide, local Japanese food blogs, TimeOut Tokyo)
+**Required source types** (see Section 5.1):
+- Google Maps, 食べログ, Google口コミ, Reputable guide (minimum 4)
 
-Optional sources:
-- Retty (レッティ) - another Japanese restaurant review platform
-- Hot Pepper Gourmet (ホットペッパーグルメ)
-- PTT / Dcard / Chinese-language travel blogs (cite clearly if used)
-- Social media mentions (TikTok, Instagram) if aggregated
+**Optional sources**:
+- Retty, Hot Pepper Gourmet, PTT/Dcard, Social media
 
-Rules:
-- Do NOT fabricate facts or reviews
-- Clearly distinguish:
-  - What sources report (use bullet points with source citations)
-  - Your synthesis or inference (clearly marked)
-- Include actual URLs in sources section
-- Note if information is unavailable (use `unknown`)
-
-**Evidence section template (for notes.md)**:
+**Evidence section template** (mandatory structure for notes.md):
 ```
 ### [Place Name]
 
-**Official**: [website URL or "no official website"]
+**Official**: [URL or "no official website"]
 
 **Google Maps**: X.X/5 (Y reviews)
 
 **食べログ (Tabelog)**: X.X/5 (Y reviews)
 - [URL]
 - 夜予算/昼予算: [price range]
-- Area ranking: [e.g., "伊勢市 うどん部門 3位" or check on Tabelog page]
+- Area ranking: [if available]
 
-**Other ratings**: [Retty, Hot Pepper Gourmet, etc.]
+**Other ratings**: [Retty, Hot Pepper, etc.]
 
 **Guide sources**:
 - [URLs with brief description]
 
 **Google口コミ patterns**:
-- [Summarize patterns from Japanese Google reviews]
+- [Summarize patterns from Japanese reviews]
 
 **Recurring pros**:
 - [List from multiple sources]
@@ -385,225 +442,292 @@ Rules:
 - [List from multiple sources]
 
 **Practical**:
-- reservation requirement: 
-- best visiting time: 
-- closed days:
-- queue:
+- reservation requirement: [required|recommended|optional|none|unknown]
+- best visiting time: [specific or unknown]
+- closed days: [specific or unknown]
+- queue: [info or unknown]
 
 **Score (50-point rubric)**:
-- [breakdown]
+- Taste/Quality: X/10
+- Value: X/10
+- Convenience: X/10
+- Consistency: X/10
+- Risk: X/10
+- **Total: X/50**
 ```
 
----
+**Stopping condition**: Do not proceed to scoring until minimum 4 sources collected (see Section 5.1).
 
-### 3 Scoring — Standard Rubric
+### 7.4 Scoring Procedure
 
-Each researched place MUST include a 50-point total score:
+**Objective**: Assign standardized score to enable comparison (see Section 5.3 for rubric).
 
-- Taste / Quality (0–10): Food quality, authenticity, execution
-- Value (0–10): Price vs quality, portion size
-- Convenience (0–10): Location, ease of reservation/access, opening hours
-- Consistency (0–10): Reliability across reviews, time, visits
-- Risk (0–10; 10 = low risk): Likelihood of disappointment, queue uncertainty, service issues
+**Procedure**:
+1. Review all collected evidence
+2. Assign scores for each of 5 dimensions (0-10 each)
+3. Calculate total (0-50)
+4. Document scoring rationale in notes.md
+5. Update candidates.md table with total score
+6. Update status based on score: score 35+ → `status: top`, score 30-34 → `status: shortlisted`, score &lt;30 → consider `status: rejected`
 
-**Scoring guidelines**:
-- 40+ = excellent, highly recommended
-- 35-39 = very good, solid choice
-- 30-34 = good, acceptable backup
-- <30 = consider exclusion
+**Interpretation**:
+- 40+ = Excellent, highly recommended
+- 35-39 = Very good, solid choice
+- 30-34 = Good, acceptable backup
+- &lt;30 = Consider exclusion (document reason)
 
-Also record:
-- reservation requirement (required | recommended | optional | none | unknown)
-- best visiting time (specific times or "off-peak", etc.)
-- closed days (especially Sunday/Monday)
-- queue expectations (if no reservation)
+**Enforcement**: Every score MUST be justifiable from evidence. Unjustified scores violate Section 5.3.
 
----
+### 7.5 Triage Procedure
 
-### 4 Triage — Exclusion with Reasons
+**Objective**: Decide which candidates advance to top-places.md and which are excluded.
 
-- Do NOT delete entries silently.
-- Mark excluded places with:
-  - status: rejected
-  - a documented reason
+**Procedure**:
+1. Review scored candidates
+2. Apply exclusion rules (see Section 6.3)
+3. For excluded places:
+   - Mark `status: rejected` in candidates.md
+   - Document reason in excluded.md
+   - DO NOT delete entry from candidates.md table
+4. For accepted places:
+   - Mark `status: top` (score 35+) or keep `status: shortlisted` (score 30-34)
+   - Add to appropriate section in top-places.md
 
-Record exclusions in:
-- excluded.md (primary location for all exclusion reasons)
-- Update candidates.md table with `status: rejected`
-
-Hard exclusion triggers:
-- Strong multi-source signals of tourist traps
-- Repeated hygiene or safety concerns
+**Hard exclusion criteria** (agent may proceed):
+- Strong multi-source tourist trap signals
+- Repeated hygiene/safety concerns
 - Repeated severe service issues
+- Score &lt; 30 with justification
 
-Soft exclusion trigger:
-- Total score < 30 / 50 (justification required)
+**Soft exclusion criteria** (request user confirmation):
+- Score exactly 30
+- Mixed signals
+- Outside target area but nearby
+- Insufficient evidence
 
----
+### 7.6 Final Output Procedure
 
-### 5 Final Output — Top Picks
+**Objective**: Maintain top-places.md with final recommendations (see Section 4.2 for structure).
 
-Maintain top-places.md with:
-- Top Picks (high-confidence, score 35+)
-- Backups (good alternatives, score 30-34)
-- Researching (in-progress candidates)
+**top-places.md mandatory sections**:
+1. **Top Picks** (score 35+): List in descending score order
+2. **Backups** (score 30-34): List in descending score order
+3. **Dining Strategy**: Time planning, reservation strategy, budget, transportation
+4. **To-Do**: Trip execution checklist (may remain unchecked)
 
-**Organization by score**:
-- List in descending score order within each section
-- Clearly show total score for each place
+**Each entry MUST include** (see Section 5):
+- name, type, area, total score (prominent)
+- Google Maps URL (direct link, tested, not placeholder)
+- Tabelog URL (direct link, tested, or "no tabelog listing")
+- One-line justification
+- Constraints (reservation, queues, closed days, price)
 
-Each entry MUST include:
-- name
-- type
-- area
-- total score (prominently displayed)
-- google maps link
-- tabelog link
-- one-line justification (why recommended)
-- constraints (reservation, queues, closed days, price level)
+**Enforcement**:
+- Generic placeholders like `[View Map]` violate Section 5
+- Missing URLs violate Section 5
+- Untested links violate Section 5
 
-**Google Maps Link Requirement**:
-- Every place in top-places.md MUST have a valid, working Google Maps link
-- Links MUST be actual URLs (not placeholders or generic text)
-- Links MUST be Direct Google Maps links: `https://maps.app.goo.gl/...`
-- Links MUST be tested/verified to point to the correct location
-- Generic placeholders like `[View Map]` without proper URLs are NOT acceptable
+### 7.7 Post-Research Completion Procedure
 
-**Tabelog Link Requirement**:
-- Every place in top-places.md MUST have a valid, working Tabelog (食べログ) link
-- Links MUST be actual URLs (not placeholders or generic text)
-- Acceptable format:
-  - Direct Tabelog links: `https://tabelog.com/[prefecture]/[area]/[area_code]/[restaurant_id]/`
-  - Example: `https://tabelog.com/mie/A2403/A240301/24000009/`
-- Links MUST be tested/verified to point to the correct restaurant
-- If a restaurant is not listed on Tabelog, note as "no tabelog listing" instead of omitting the field
+**Objective**: Finalize documentation and update progress tracking.
 
-**Additional sections to include**:
-- Dining Strategy:
-  - Time planning (lunch/dinner hours, local customs)
-  - Reservation strategy (which places need booking, how far in advance)
-  - Budget allocation (price ranges per category)
-  - Transportation from hotel (how to reach different areas)
-- To-Do (Trip Execution Checklist):
-  - **Purpose**: Action items for travelers during trip planning phase
-  - **Scope**: Reservations, confirmations, day-of logistics
-  - **Status**: May contain unchecked items `[ ]` even when research is complete
-  - **Note**: This is SEPARATE from research completion (overview.md checklist)
-  - Include items like:
-    - [ ] Research completion tasks (mark these as `[x]` when research done)
-    - [ ] Reservation tasks (for trip planning, can remain `[ ]`)
-    - [ ] Information confirmation tasks (for trip planning, can remain `[ ]`)
-    - [ ] Day-of preparation tasks (for trip execution, can remain `[ ]`)
+**Mandatory steps** (see Section 3):
+1. Run 4 verification commands from PROGRESS.md
+2. Verify ALL pass before marking "✅ Completed"
+3. Update PROGRESS.md with current status (primary source of truth)
+4. Sync README.md progress table to match PROGRESS.md
+5. Update recommendation count
+6. Add notes about completion
+
+**If workflow improvements discovered**:
+- Document in Section 8 "Process Improvements"
+- Update only this section; do not modify constraints without user approval
+
+**Stopping condition**: Do not mark "✅ Completed" unless all 4 verification commands pass (see Section 3.1).
 
 ---
 
-### 6 Post-Research Updates — Documentation Maintenance
+## SECTION 8: PROCESS IMPROVEMENTS (LESSONS LEARNED)
 
-**After completing research for a city, MUST do the following**:
+**Note**: Agents MAY update this section when discovering verified workflow improvements (see Section 2.3).
 
-1. **Verify Research Completion Standard** (see [PROGRESS.md](PROGRESS.md)):
-   - ✅ All candidates triaged (no `status: inbox` remaining)
-   - ✅ No pending decisions in excluded.md
-   - ✅ top-places.md finalized with Top Picks and Dining Strategy
-   - ✅ overview.md checklist fully marked `[x]`
-   - Run the verification commands from PROGRESS.md
+### 8.1 Efficient Research Workflow
 
-2. **Update progress tracking**:
-   - Update PROGRESS.md with current status (primary source of truth)
-   - Sync README.md progress table to match PROGRESS.md
-   - Use accurate status icon based on completion criteria:
-     - ⏳ Not Started → 📝 In Progress → 🔄 Needs Finalization → ✅ Completed
-   - Only use ✅ when ALL completion criteria are met
-   - Update recommendation count
-   - Add relevant notes about research completion
+1. Start with overview.md - provides context for all subsequent work
+2. Batch web searches - 3-4 searches gather 20+ candidates quickly
+3. Prioritize ruthlessly - research top 3-5 candidates first with full detail
+4. Use targeted searches - "[Place] [City] 食べログ 予約 口コミ" gets most info in one query
+5. Document incrementally - update files as you go, commit frequently
 
-3. **Update AGENTS.md if workflow improved**:
-   - If you discovered a more efficient research method, document it in "Process Improvements (Lessons Learned)"
-   - If you found common patterns or pitfalls, add them to relevant sections
-   - Keep the workflow documentation current with actual practices
+### 8.2 Pattern Recognition
 
-**Why this matters**:
-- PROGRESS.md serves as the project progress dashboard - it must reflect current reality
-- README.md provides a quick overview that syncs with PROGRESS.md
-- Completion standards ensure consistency across all cities
-- AGENTS.md captures institutional knowledge - improvements benefit future research
-- Consistent updates prevent confusion and duplicate work
+**Tourist trap signals**:
+- Only near major attractions
+- Overly positive generic reviews
+- No Japanese locals mentioned in reviews
 
----
+**Authentic signals**:
+- High 食べログ ratings from local reviewers
+- Mixed tourist/local clientele
+- Family-owned
+- Specific dishes praised
 
-## Process Improvements (Lessons Learned)
+**Red flags**:
+- Inconsistent service complaints
+- Multiple hygiene mentions
+- Closed unexpectedly
 
-### Efficient Research Workflow
+**Green flags**:
+- Michelin/guide mentions
+- Specific dish recommendations
+- Reservation difficulty (indicates popularity)
+- Strong 食べログ百名店 ranking
 
-1. **Start with overview.md** - gives context for all other work
-2. **Batch web searches** - do 3-4 searches to gather 20+ candidates quickly
-3. **Prioritize ruthlessly** - research top 3-5 candidates first with full detail
-4. **Use targeted searches** - "[Place] [City] 食べログ 予約 口コミ" gets most info in one query
-5. **Document as you go** - update files incrementally and commit frequently
-
-### Common Patterns to Look For
-
-When researching restaurants:
-- **Tourist trap signals**: Only near major attractions, overly positive generic reviews, no Japanese locals mentioned in reviews
-- **Authentic signals**: High 食べログ ratings from local reviewers, mixed tourist/local clientele, family-owned, specific dishes praised
-- **Red flags**: Inconsistent service complaints, hygiene issues mentioned multiple times, closed unexpectedly
-- **Green flags**: Michelin/guide mentions, specific dish recommendations, reservation difficulty (shows popularity), strong 食べログ百名店 ranking
-
-### Time Allocation
+### 8.3 Time Allocation Guidelines
 
 For a new city:
-- Overview + inbox collection: 30 minutes
-- Detailed research per place: 15-20 minutes each
+- Overview + inbox collection: ~30 minutes
+- Detailed research per place: 15-20 minutes
 - Target: 5 detailed researches = solid foundation
-- Can expand later with medium-priority candidates
+- Expand later with medium-priority candidates
 
-### Top-places.md Strategy
+### 8.4 Recommendation Strategy
 
-- **Aim for 5-10 top picks** per city (enough variety, not overwhelming)
-- **Include 3-5 backups** (alternatives if top picks unavailable)
-- **Balance categories**: At least one casual option, one special occasion, one dessert/gelato
-- **Geographic spread**: Cover different neighborhoods to match daily itinerary
-
----
-
-## Documentation & Naming Rules
-
-- `AGENTS.md` and `PROGRESS.md` MUST be primarily in English.
-- Other documents in this repo MUST be primarily in Japanese.
-- Use English for structured fields and keys
-- Dates must follow ISO format (YYYY-MM-DD)
-- Unknown information must be labeled as `unknown`
-- Place filenames MUST follow the format: `<city>-<normalized-place-name>.md`
+- Aim for 5-10 top picks per city (variety without overwhelm)
+- Include 3-5 backups (alternatives if top picks unavailable)
+- Balance categories: casual, special occasion, dessert/gelato
+- Geographic spread: cover neighborhoods matching daily itinerary
 
 ---
 
-## Quality Bar
+## SECTION 9: EXPLICIT NON-GOALS
 
-- Prefer fewer, higher-confidence picks
-- Avoid relying on a single platform
-- Preserve traceability at all times
-- **Aim for evidence from 4+ sources per place** (Google Maps + 食べログ + Google口コミ + Guide)
-- **Every score must be justifiable** from the evidence collected
-- **Document uncertainty** - if information conflicts or is unavailable, note it
+Agents MUST NOT attempt to optimize or suggest improvements for:
 
-## Common Pitfalls to Avoid
+**Out of Scope**:
+- Transportation logistics (flights, trains, buses)
+- Accommodation selection or booking
+- Non-food activities (sightseeing, museums, entertainment)
+- Budget optimization across entire trip
+- Day-by-day itinerary beyond dining recommendations
 
-1. **Don't research everything at once** - focus on top candidates first
-2. **Don't skip overview.md** - context is crucial for prioritization
-3. **Don't rely on single sources** - cross-reference at least 3-4 sources
-4. **Don't forget practical constraints** - reservation policies, closed days, queue times matter
-5. **Don't over-optimize scores** - a 35-40 range is realistic for good places; not everything is 45+
-6. **Don't neglect geographic distribution** - consider travel time from hotel
+**Forbidden Suggestions**:
+- "You should visit [attraction] while in this city"
+- "Consider changing your accommodation to X"
+- "This restaurant is far, you should book a different hotel"
+- "Skip [city] and go to [other city] instead"
 
-## Research Questions Checklist
+**Rationale**: Trip logistics are FINAL (Section 1.1). Agents are food research specialists only.
 
-For each researched place, ensure you can answer:
-- ✓ What is the exact rating and review count on Google Maps and 食べログ?
-- ✓ What do Google口コミ (Japanese reviews) say about it?
-- ✓ What are the signature dishes?
-- ✓ Do I need a reservation? How far in advance?
-- ✓ When is it closed? (day of week)
-- ✓ What is the expected wait time without reservation?
-- ✓ What is the approximate price range (食べログ 夜予算/昼予算)?
-- ✓ What are the most common complaints?
-- ✓ Is it touristy or more local?
+---
+
+## SECTION 10: SELF-VERIFICATION CHECKLIST
+
+Before completing any task, agents MUST verify:
+
+### 10.1 Immutable Constraint Compliance
+
+- [ ] Have I attempted to change travel dates, accommodations, or transportation? (MUST NOT)
+- [ ] Have I researched non-food activities? (MUST NOT)
+- [ ] Have I created files outside the 5 mandatory files per city? (MUST NOT)
+- [ ] Have I deleted candidate entries from candidates.md without explicit permission? (MUST NOT)
+- [ ] Have I fabricated reviews, ratings, or facts? (MUST NOT)
+
+### 10.2 Permission Model Compliance
+
+- [ ] Have I attempted actions not explicitly permitted in Section 2? (MUST NOT)
+- [ ] Have I overridden this document based on "common sense"? (MUST NOT)
+- [ ] Have I modified constraint sections (Sections 1-6) without user approval? (MUST NOT)
+- [ ] If permission was uncertain, did I request clarification? (MUST)
+
+### 10.3 Evidence and Scoring Compliance
+
+- [ ] Have I collected minimum 4 sources for each researched place? (MUST)
+- [ ] Have I documented Tabelog ranking for each place? (MUST)
+- [ ] Are all scores justifiable from collected evidence? (MUST)
+- [ ] Have I used the exact 50-point rubric (5 dimensions × 10 points)? (MUST)
+- [ ] Have I populated all 4 practical information fields (even if "unknown")? (MUST)
+
+### 10.4 Progressive Disclosure Compliance
+
+- [ ] Does top-places.md contain only summaries (not detailed evidence)? (MUST)
+- [ ] Does notes.md contain full evidence with sources? (MUST)
+- [ ] Are Google Maps and Tabelog links direct URLs (not placeholders)? (MUST)
+- [ ] Can each file be read independently without forcing user to read all files? (MUST)
+
+### 10.5 Completion Criteria Compliance
+
+- [ ] Before marking "✅ Completed", did I run all 4 verification commands? (MUST)
+- [ ] Did all 4 verification commands pass? (MUST)
+- [ ] Is overview.md checklist 100% checked `[x]`? (MUST for completion)
+- [ ] Did I update PROGRESS.md and sync README.md? (MUST)
+
+### 10.6 Assumption Transparency
+
+- [ ] Have I documented all assumptions explicitly in notes.md? (MUST if proceeding with assumptions)
+- [ ] Have I marked synthesized content vs. source-reported content? (MUST)
+- [ ] Have I requested clarification when evidence was contradictory? (MUST)
+
+---
+
+## SECTION 11: VIOLATION HANDLING
+
+If an agent detects it has violated any constraint in this document:
+
+**Immediate actions**:
+1. HALT current operation
+2. Document the violation explicitly to user
+3. Explain which section was violated
+4. Propose corrective action
+5. Request user approval to proceed with correction
+
+**Do NOT**:
+- Continue operation hoping violation goes unnoticed
+- Silently attempt to fix violation without disclosure
+- Rationalize why violation was "necessary"
+- Request permission to ignore the constraint
+
+**Rationale**: Transparency and constraint adherence are critical to project integrity.
+
+---
+
+## APPENDIX A: QUICK REFERENCE
+
+### Mandatory File Structure
+```
+gourmet/[city]/overview.md     - Strategy & progress
+gourmet/[city]/candidates.md   - All candidates (table)
+gourmet/[city]/top-places.md   - Final recommendations
+gourmet/[city]/excluded.md     - Rejected with reasons
+gourmet/[city]/notes.md        - Detailed evidence
+```
+
+### Scoring Rubric (50 points total)
+- Taste/Quality: 0-10
+- Value: 0-10
+- Convenience: 0-10
+- Consistency: 0-10
+- Risk: 0-10 (10 = low risk)
+
+### Completion Verification Commands
+```bash
+grep "status: inbox" gourmet/[city]/candidates.md
+grep -i "TODO\|pending" gourmet/[city]/excluded.md
+grep -E "^## (Top Picks|Backups|Dining Strategy|To-Do)" gourmet/[city]/top-places.md
+grep "\- \[ \]" gourmet/[city]/overview.md
+```
+
+### Minimum Evidence Sources (4 required)
+1. Google Maps
+2. 食べログ (Tabelog)
+3. Google口コミ
+4. Reputable guide
+
+### Status Progression
+⏳ Not Started → 📝 In Progress → 🔄 Needs Finalization → ✅ Completed
+
+---
+
+**Document Version**: 2.0
+**Last Updated**: 2026-01-12
+**Optimized for**: Clarity, enforceability, non-ambiguity, anti-hallucination
