@@ -249,7 +249,7 @@ Minimum fields per candidate in candidates.md table:
 - type (e.g., pasta, steak, espresso, gelato)
 - google_maps_url (use search link initially, replace with exact link when researched)
 - status: inbox | researching | shortlisted | rejected | top
-- sources (brief: e.g., "Tripadvisor, Reddit, Michelin")
+- sources (brief: e.g., "食べログ, Google Maps, Michelin")
 - notes (brief summary)
 
 **Prioritization**: Focus on 3-5 top candidates first, then expand. Don't try to research everything at once.
@@ -296,18 +296,20 @@ For each candidate promoted to research:
 - Summarize evidence from multiple independent sources.
 
 **Efficient research pattern**:
-1. Use web_search with specific queries: "[Restaurant Name] [City] reviews rating reservation Reddit"
-2. One search often provides Google Maps rating, Tripadvisor reviews, and Reddit sentiment together
+1. Use web_search with specific queries: "[Restaurant Name] [City] 食べログ 予約 口コミ"
+2. One search often provides Google Maps rating, 食べログ reviews, and Google口コミ together
 3. Extract key information systematically
 4. Document full evidence in notes.md, update candidates.md table with status and brief summary
 
 Required source types:
 - Google Maps (rating, review count, recurring pros/cons)
-- Tripadvisor or similar aggregator (rating, review count)
-- Reddit (threads/comments; summarize patterns)
-- One or more reputable food or travel guides (Michelin, TimeOut, local blogs)
+- 食べログ (Tabelog) (rating, review count, detailed scoring)
+- Google口コミ (Google Reviews in Japanese; summarize patterns from local reviewers)
+- One or more reputable food or travel guides (Michelin Guide, local Japanese food blogs, TimeOut Tokyo)
 
 Optional sources:
+- Retty (レッティ) - another Japanese restaurant review platform
+- Hot Pepper Gourmet (ホットペッパーグルメ)
 - PTT / Dcard / Chinese-language travel blogs (cite clearly if used)
 - Social media mentions (TikTok, Instagram) if aggregated
 
@@ -327,16 +329,17 @@ Rules:
 
 **Google Maps**: X.X/5 (Y reviews)
 
-**Tripadvisor**: X.X/5 (Y reviews)
+**食べログ (Tabelog)**: X.X/5 (Y reviews)
 - [URL]
+- 夜予算/昼予算: [price range]
 
-**Other ratings**: [Restaurant Guru, Foursquare, etc.]
+**Other ratings**: [Retty, Hot Pepper Gourmet, etc.]
 
 **Guide sources**:
 - [URLs with brief description]
 
-**Reddit sentiment**:
-- [Summarize patterns from multiple threads]
+**Google口コミ patterns**:
+- [Summarize patterns from Japanese Google reviews]
 
 **Recurring pros**:
 - [List from multiple sources]
@@ -485,16 +488,16 @@ Each entry MUST include:
 1. **Start with overview.md** - gives context for all other work
 2. **Batch web searches** - do 3-4 searches to gather 20+ candidates quickly
 3. **Prioritize ruthlessly** - research top 3-5 candidates first with full detail
-4. **Use targeted searches** - "[Place] [City] reviews rating reservation Reddit" gets most info in one query
+4. **Use targeted searches** - "[Place] [City] 食べログ 予約 口コミ" gets most info in one query
 5. **Document as you go** - update files incrementally and commit frequently
 
 ### Common Patterns to Look For
 
 When researching restaurants:
-- **Tourist trap signals**: Only near major attractions, overly positive generic reviews, no locals mentioned
-- **Authentic signals**: Reddit locals recommend, mixed tourist/local clientele, family-owned, specific dishes praised
+- **Tourist trap signals**: Only near major attractions, overly positive generic reviews, no Japanese locals mentioned in reviews
+- **Authentic signals**: High 食べログ ratings from local reviewers, mixed tourist/local clientele, family-owned, specific dishes praised
 - **Red flags**: Inconsistent service complaints, hygiene issues mentioned multiple times, closed unexpectedly
-- **Green flags**: Michelin/guide mentions, specific dish recommendations, reservation difficulty (shows popularity)
+- **Green flags**: Michelin/guide mentions, specific dish recommendations, reservation difficulty (shows popularity), strong 食べログ百名店 ranking
 
 ### Time Allocation
 
@@ -529,7 +532,7 @@ For a new city:
 - Prefer fewer, higher-confidence picks
 - Avoid relying on a single platform
 - Preserve traceability at all times
-- **Aim for evidence from 4+ sources per place** (Google Maps + Tripadvisor + Reddit + Guide)
+- **Aim for evidence from 4+ sources per place** (Google Maps + 食べログ + Google口コミ + Guide)
 - **Every score must be justifiable** from the evidence collected
 - **Document uncertainty** - if information conflicts or is unavailable, note it
 
@@ -545,12 +548,12 @@ For a new city:
 ## Research Questions Checklist
 
 For each researched place, ensure you can answer:
-- ✓ What is the exact rating and review count?
-- ✓ What do Reddit users say about it?
+- ✓ What is the exact rating and review count on Google Maps and 食べログ?
+- ✓ What do Google口コミ (Japanese reviews) say about it?
 - ✓ What are the signature dishes?
 - ✓ Do I need a reservation? How far in advance?
 - ✓ When is it closed? (day of week)
 - ✓ What is the expected wait time without reservation?
-- ✓ What is the approximate price range?
+- ✓ What is the approximate price range (食べログ 夜予算/昼予算)?
 - ✓ What are the most common complaints?
 - ✓ Is it touristy or more local?
