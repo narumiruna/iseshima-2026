@@ -16,7 +16,7 @@
 | 伊勢市 | ✅ 完了 | 8 | Top Picks 7, Backup 1 |
 | 松阪市 | ✅ 完了 | 8 | Top Picks 5 (レストラン3+デザート2), Backup 3 |
 | 鳥羽市 | ✅ 完了 | 8 | Top Picks 7, Backup 1 |
-| 志摩市 | ✅ 完了 | 5 | Top Picks 4, Backup 1, 岩牡蠣9月旬 |
+| 志摩市 | ✅ 完了 | 9 | Top Picks 7 (フレンチ2+うなぎ1+カフェ1+和食1+的矢かき1+海鮮1), Backup 2, 岩牡蠣9月旬, Tabelog高評価店追加調査完了 |
 
 詳細は [PROGRESS.md](PROGRESS.md) を参照
 
