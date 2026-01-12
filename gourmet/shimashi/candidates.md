@@ -11,7 +11,7 @@
 | 賢島グランドホテル | restaurant | 賢島 | 海鮮丼 | https://www.google.com/maps/search/?api=1&query=賢島グランドホテル | rejected | - | 食べログ3.02 | 食事のみ利用可 |
 | 網元の店 八代 | restaurant | 英虞湾 | 海鮮料理、活造り | https://www.google.com/maps/search/?api=1&query=網元の店+八代+志摩市 | inbox | - | 食べログ3.52 | 分厚い海鮮丼、地元客に人気、売り切れ次第終了 |
 | 日本料理 鯛（たい） | restaurant | 志摩市 | 日本料理 | https://www.google.com/maps/search/?api=1&query=日本料理+鯛+志摩市 | rejected | - | 地域ガイド | ランチ人気 |
-| ラ・メール ザ クラシック | restaurant | 志摩観光ホテル | フレンチ、海鮮 | https://www.google.com/maps/search/?api=1&query=ラ・メール+志摩観光ホテル | shortlisted | 43 | 食べログ4.08（旧店名：ラ・メール） | 志摩観光ホテル内本格フレンチ、G7サミット会場 |
+| ラ・メール ザ クラシック | restaurant | 志摩観光ホテル | フレンチ、海鮮 | https://www.google.com/maps/search/?api=1&query=ラ・メール+ザ+クラシック+志摩観光ホテル | shortlisted | 43 | 食べログ4.08（旧店名：ラ・メール） | 志摩観光ホテル内本格フレンチ、G7サミット会場 |
 | 鮨暁 | restaurant | 志摩神明 | 寿司 | https://www.google.com/maps/search/?api=1&query=鮨暁+志摩市 | inbox | - | 食べログ3.52 | 地元ならではの新鮮な寿司、予約推奨 |
 | まごろく | restaurant | 志摩市 | 居酒屋 | https://www.google.com/maps/search/?api=1&query=まごろく+志摩市 | rejected | - | じゃらん | 旬の食材 |
 | いかだ荘 山上 | restaurant | 的矢湾 | 的矢かき料理 | https://www.google.com/maps/search/?api=1&query=いかだ荘+山上+志摩市 | shortlisted | 38 | 食べログ3.54, じゃらん4.2 | 牡蠣づくしコース、料理旅館、ランチ¥3,800～ |
