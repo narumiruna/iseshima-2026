@@ -234,12 +234,12 @@ When starting research for a new city:
 
 **inbox.md structure recommendation**:
 ```
-## Category (e.g., sukiyaki)
-1. **Place Name**
-   - Location: area
-   - Highlights: key dishes/unique features
-   - Notes: constraints
-   - Sources: source type
+## カテゴリー (e.g., すき焼き)
+1. **店舗名**
+   - 所在地：エリア
+   - 特徴：代表的な料理／独自の特徴
+   - 注意点：制約事項
+   - 情報源：情報源の種類
 ```
 
 Minimum fields per candidate in candidates.md table:
