@@ -309,6 +309,21 @@ For each candidate promoted to research:
 3. Extract key information systematically
 4. Document full evidence in notes.md, update candidates.md table with status and brief summary
 
+**Tabelog Ranking (食べログランキング)**:
+- **Always check Tabelog ranking**: Search for "[City] [cuisine type] 食べログ ランキング" or check the restaurant's Tabelog page for its score and area ranking
+- **Tabelog Score System**:
+  - Score range: 0-5.0 (updated twice monthly based on user reviews)
+  - 4.0+ = Exceptional (only 0.07% of restaurants)
+  - 3.5-3.9 = Excellent, highly recommended
+  - 3.0-3.4 = Good, worth visiting
+  - Below 3.0 = Consider carefully
+- **How to use rankings**:
+  - Check both the absolute score and the ranking within the city/area
+  - Example searches: "伊勢 うどん 食べログ ランキング", "伊勢市 海鮮 食べログ"
+  - Look for restaurants in top rankings for their category in the area
+  - Consider review count - more reviews = more reliable score
+- **Note**: Tabelog ranking (score-based, updated monthly) is DIFFERENT from 百名店 (annual award)
+
 Required source types:
 - Google Maps (rating, review count, recurring pros/cons)
 - 食べログ (Tabelog) (rating, review count, detailed scoring)
@@ -340,6 +355,7 @@ Rules:
 **食べログ (Tabelog)**: X.X/5 (Y reviews)
 - [URL]
 - 夜予算/昼予算: [price range]
+- Area ranking: [e.g., "伊勢市 うどん部門 3位" or check on Tabelog page]
 
 **Other ratings**: [Retty, Hot Pepper Gourmet, etc.]
 
