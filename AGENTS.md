@@ -423,6 +423,7 @@ Each entry MUST include:
 - area
 - total score (prominently displayed)
 - google maps link
+- tabelog link
 - one-line justification (why recommended)
 - constraints (reservation, queues, closed days, price level)
 
@@ -435,6 +436,15 @@ Each entry MUST include:
   - Place links: `https://www.google.com/maps/place/[Place+Name]`
 - Links MUST be tested/verified to point to the correct location
 - Generic placeholders like `[View Map]` without proper URLs are NOT acceptable
+
+**Tabelog Link Requirement**:
+- Every place in top-places.md MUST have a valid, working Tabelog (食べログ) link
+- Links MUST be actual URLs (not placeholders or generic text)
+- Acceptable format:
+  - Direct Tabelog links: `https://tabelog.com/[prefecture]/[area]/[area_code]/[restaurant_id]/`
+  - Example: `https://tabelog.com/mie/A2403/A240301/24000009/`
+- Links MUST be tested/verified to point to the correct restaurant
+- If a restaurant is not listed on Tabelog, note as "no tabelog listing" instead of omitting the field
 
 **Additional sections to include**:
 - Dining Strategy:
