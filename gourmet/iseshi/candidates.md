@@ -20,6 +20,7 @@
 | すし久 | restaurant | おかげ横丁 | てこね寿司・郷土料理 | https://www.google.com/maps/search/?api=1&query=すし久+おかげ横丁+伊勢市 | researching | - | aumo | てこね寿司が人気 |
 | 豚捨 | restaurant | おかげ横丁 | コロッケ・牛丼 | https://www.google.com/maps/search/?api=1&query=豚捨+おかげ横丁+伊勢市 | researching | - | aumo | 過去訪問済み、コロッケ・牛丼が名物 |
 | ボンヴィヴァン | restaurant | 外宮前 | フレンチ | https://www.google.com/maps/search/?api=1&query=ボンヴィヴァン+伊勢市+外宮前 | researching | - | ヒトサラ, TripAdvisor | おしゃれフレンチ、記念日向け |
+| にかわ | restaurant | 一之木（伊勢市駅徒歩8分） | 焼鳥 | https://www.google.com/maps/search/?api=1&query=焼鳥+にかわ+伊勢市 | top | 42/50 | 食べログ4.00, 百名店2023-2025, 一休.com | 焼鳥百名店、完全予約制、おまかせコース、月曜定休 |
 
 ---
 
