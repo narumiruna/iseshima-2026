@@ -290,6 +290,56 @@ excluded.md → [reason] → (Optional) notes.md for details
 - ❌ Deleting rejected candidates instead of documenting
 - ❌ Creating files outside the five-file structure
 
+### Template Files
+
+**Location**: `templates/` directory at repository root
+
+**Purpose**: Provide standardized starting points for creating city-specific research documentation.
+
+**Available Templates**:
+
+The `templates/` directory contains markdown templates for all five required files:
+
+1. **overview.md** - City food strategy and progress tracker
+   - Travel information template (dates, accommodation, attractions)
+   - Food highlights section (local dishes and specialties)
+   - Research strategy template (priorities and constraints)
+   - Progress checklist template (research completion tracking)
+
+2. **candidates.md** - Candidate restaurants table
+   - Pre-structured table with all required columns
+   - Status value examples (inbox | researching | shortlisted | rejected | top)
+   - Placeholder rows showing expected format
+
+3. **notes.md** - Detailed evidence and research notes
+   - Evidence collection template with all required sources
+   - 50-point scoring rubric breakdown structure
+   - Practical information fields (reservation, hours, closed days)
+   - Review patterns and pros/cons sections
+
+4. **top-places.md** - Final recommendation list
+   - Top Picks section template (35+ points)
+   - Backups section template (30-34 points)
+   - Researching section template
+   - Dining Strategy template (time planning, reservations, budget, access)
+   - To-Do section template (trip execution checklist)
+
+5. **excluded.md** - Excluded places documentation
+   - Lower priority candidates section
+   - Not researched further section
+   - Exclusion reason categories (Tourist Trap, Low Score, Service Issues, etc.)
+
+**Usage**:
+
+When starting research for a new city:
+1. Create new directory: `gourmet/[cityname]/`
+2. Copy all 5 templates from `templates/` to the new city directory
+3. Start with `overview.md` to establish context and strategy
+4. Replace placeholder text (marked with `[brackets]`) with actual content
+5. Follow the six-stage research workflow (see below)
+
+**Template Reference**: See `templates/README.md` for detailed usage instructions and examples.
+
 ---
 
 ## Research Workflow
@@ -313,25 +363,31 @@ Stage 6: Completion    → Verify and document completion
 **Objective**: Establish research foundation and strategy
 
 **Actions**:
-1. Create `overview.md` with:
+1. Set up city directory structure:
+   - Create new directory: `gourmet/[cityname]/`
+   - Copy templates from `templates/` directory (see <a>Template Files</a>)
+   - This provides standardized starting structure for all five required files
+
+2. Create `overview.md` (using template as starting point):
    - Travel dates and accommodation info
    - City-specific food highlights (e.g., 伊勢うどん, 松阪牛)
    - Research priorities (cuisine types, special dishes)
    - Progress checklist (initially empty)
    - Known constraints (business hours, holidays, transportation)
 
-2. Gather initial candidate pool using web_search:
+3. Gather initial candidate pool using web_search:
    - "best [city cuisine] restaurants [year]" (e.g., "best 伊勢うどん restaurants 2026")
    - "best [category] in [city]" (e.g., "best dessert cafes 志摩市")
    - "[specific dish] restaurants [city]" (e.g., "伊勢海老 restaurants Ise")
    - Focus on recent guides (2024-2026) and local sources
 
-3. Batch similar searches (efficiency):
+4. Batch similar searches (efficiency):
    - One search: main restaurants by cuisine type
    - One search: casual/local specialties
    - One search: desserts/cafes
 
 **Success criteria**:
+- City directory created with all template files
 - overview.md created with complete sections
 - 15-25 initial candidates identified
 - Research priorities documented
@@ -345,7 +401,7 @@ Stage 6: Completion    → Verify and document completion
 **Objective**: Build comprehensive candidate list with basic information
 
 **Actions**:
-1. Create `candidates.md` with structured table
+1. Use `candidates.md` template (already copied in Stage 0) with structured table
 2. Add all discovered candidates to table with required fields:
    - `name`: Restaurant/cafe name (prefer original language)
    - `category`: restaurant | cafe | dessert
@@ -1409,12 +1465,13 @@ grep "\- \[ \]" gourmet/[city]/overview.md
 ### Research Workflow Checklist
 
 - [ ] **Stage 0: Initialize**
+  - [ ] Create city directory and copy templates from templates/
   - [ ] Create overview.md
   - [ ] Conduct initial web searches
   - [ ] Gather 15-25 candidates
   
 - [ ] **Stage 1: Discovery**
-  - [ ] Create candidates.md table
+  - [ ] Use candidates.md template
   - [ ] Add all candidates with status: inbox
   - [ ] Prioritize top 3-5
 
@@ -1450,6 +1507,7 @@ grep "\- \[ \]" gourmet/[city]/overview.md
 
 - **PROGRESS.md**: Detailed completion criteria and verification commands
 - **README.md**: Traveler-facing project overview (Japanese)
+- **templates/**: Template files for creating new city research documentation
 - **City directories**: `gourmet/[city]/`
 
 ### Key Principles
