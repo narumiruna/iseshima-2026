@@ -309,6 +309,18 @@ For each candidate promoted to research:
 3. Extract key information systematically
 4. Document full evidence in notes.md, update candidates.md table with status and brief summary
 
+**Tabelog Ranking Search**:
+- **Always check for Tabelog rankings**: Search for "食べログ百名店 [cuisine type] [city/prefecture]" or "[Restaurant Name] 食べログ百名店"
+- **百名店 (Hyakumeiten)**: Tabelog's annual "Top 100" lists by category (e.g., うどん百名店, 海鮮百名店, カフェ百名店)
+  - Being listed indicates exceptional quality and local/expert recognition
+  - Lists are updated annually, so check for the most recent year
+  - Example searches: "食べログ百名店 うどん 三重", "食べログ百名店 海鮮 伊勢"
+- **How to use this information**:
+  - 百名店 status is a strong positive signal (add points in Taste/Quality and Consistency)
+  - Note the ranking year in your evidence (e.g., "2024年百名店")
+  - If a restaurant is consistently listed across multiple years, that's an even stronger signal
+  - Not being listed doesn't mean it's bad - many excellent places don't make the list
+
 Required source types:
 - Google Maps (rating, review count, recurring pros/cons)
 - 食べログ (Tabelog) (rating, review count, detailed scoring)
@@ -340,6 +352,7 @@ Rules:
 **食べログ (Tabelog)**: X.X/5 (Y reviews)
 - [URL]
 - 夜予算/昼予算: [price range]
+- 百名店: [e.g., "2024年うどん百名店" or "not listed"]
 
 **Other ratings**: [Retty, Hot Pepper Gourmet, etc.]
 
