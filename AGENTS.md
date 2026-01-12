@@ -97,7 +97,9 @@ overview.md       ← START HERE: Context, strategy, progress at a glance
     ↓
 top-places.md     ← ACTIONABLE: Final recommendations with scores
     ↓
-candidates.md     ← COMPLETE: All candidates with detailed evidence and ratings
+candidates.md     ← COMPLETE: All candidates with scores and status
+    ↓
+notes.md          ← EVIDENCE: Detailed research evidence and scoring rationale
     ↓
 excluded.md       ← REJECTED: What was considered and why it was excluded
 ```
@@ -105,16 +107,20 @@ excluded.md       ← REJECTED: What was considered and why it was excluded
 **Each file serves a distinct purpose**:
 - **overview.md**: Quick orientation (5-minute read) - City food strategy and progress
 - **top-places.md**: Decision-making (10-minute read, includes dining strategy) - Final recommendation list
-- **candidates.md**: Complete research (shows all candidates with scores, evidence, and status) - Candidate restaurants and ratings
+- **candidates.md**: Complete research (shows all candidates with scores and status) - Candidate restaurants and ratings
+- **notes.md**: Detailed evidence (research trail with sources, scoring rationale) - Detailed evidence and research notes
 - **excluded.md**: Audit trail (transparency, prevents re-research) - Excluded places and reasons
 
 #### Within-Document Disclosure
 
 **In candidates.md**:
 1. **Quick reference table at top** (name, category, area, type, google_maps_url, status, score) → quick scan
-2. **Detailed evidence sections per place** below the table → full research trail with sources
-3. **Scoring rationale** → justification for each score component
-4. **Practical information** → reservation, queues, closed days, etc.
+2. **Brief summary in notes column** → high-level overview per place
+
+**In notes.md**:
+1. **Detailed evidence sections per place** → full research trail with sources
+2. **Scoring rationale** → justification for each score component
+3. **Practical information** → reservation, queues, closed days, etc.
 
 **In top-places.md**:
 1. **Top Picks** first (35+ scores) → immediate action
