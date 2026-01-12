@@ -4,16 +4,16 @@
 
 - The main purpose of this project is to plan a trip from 2026-09-25 to 2026-10-04, especially focusing on food.
 - All flights, trains, and accommodations have already been booked and are FINAL.
-- Target areas:
-  - Ise City (Iseshi)
-  - Matsusaka City (Matsusakashi)
-  - Toba City (Tobashi)
-  - Shima City (Shimashi)
-- Previously visited restaurants (for reference):
-  - Wadakin
-  - Ichigetsuya
-  - Butasute
-  - Isshobin
+- 調査対象エリア：
+  - 伊勢市
+  - 松阪市
+  - 鳥羽市
+  - 志摩市
+- 過去に訪問したことのあるレストラン（参考情報）：
+  - 和田金
+  - 一月家
+  - 豚捨
+  - 一升びん
 
 ## Agent Mission
 
