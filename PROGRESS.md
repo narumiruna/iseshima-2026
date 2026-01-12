@@ -49,13 +49,15 @@ Expected results for completed city:
 | City | Status | Recommendations | Notes | Last Updated |
 |------|--------|-----------------|-------|--------------|
 | 伊勢市 (Ise City) | ✅ Completed | 7 | All criteria met: Top Picks (6), Backup (1), all triaged | 2026-01-12 |
-| 松阪市 (Matsusaka City) | ⏳ Not Started | 0 | - | - |
+| 松阪市 (Matsusaka City) | 🔄 Needs Finalization | 5 | Top Picks (3), Backups (2), restaurants researched, cafes pending | 2026-01-12 |
 | 鳥羽市 (Toba City) | ⏳ Not Started | 0 | - | - |
 | 志摩市 (Shima City) | ⏳ Not Started | 0 | - | - |
 
 ## Research Timeline
 
 - **2026-01-12**: Started research on 伊勢市 (Ise City)
+- **2026-01-12**: Completed research on 伊勢市 (Ise City)
+- **2026-01-12**: Started research on 松阪市 (Matsusaka City) - Top 5 restaurants researched
 
 ---
 
