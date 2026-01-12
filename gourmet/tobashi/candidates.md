@@ -8,19 +8,19 @@
 | 海鮮丼＆浜焼市場 海太郎 | restaurant | 安楽島町 | 海鮮丼、浜焼き | https://www.google.com/maps/search/?api=1&query=海太郎+鳥羽市 | shortlisted | 38 | 食べログ3.34, 口コミ73件 | 朝獲れ海鮮、ボリューム満点、ネット予約可 |
 | 海女小屋 鳥羽 はまなみ | restaurant | 鳥羽駅前 | 海鮮料理、体験型 | https://www.google.com/maps/search/?api=1&query=海女小屋+鳥羽+はまなみ | shortlisted | 38 | 食べログ3.5, 口コミ54件 | 鳥羽駅から徒歩5分、活魚料理 |
 | 四季の海鮮 魚々味（ととみ） | restaurant | 鳥羽市 | 海鮮料理 | https://www.google.com/maps/search/?api=1&query=四季の海鮮+魚々味+鳥羽市 | shortlisted | 40 | 食べログ3.42, 口コミ125件 | 漁協直営、リーズナブル |
-| 海の駅 黒潮ダイニング パールロード店 | restaurant | パールロード | 海鮮料理 | https://www.google.com/maps/search/?api=1&query=黒潮ダイニング+パールロード+鳥羽 | inbox | | 食べログ3.49 | 伊勢海老入り海鮮丼 |
-| 漣（さざなみ）鳥羽店 | restaurant | 鳥羽市 | 海鮮料理 | https://www.google.com/maps/search/?api=1&query=漣+鳥羽店 | inbox | | トリップアドバイザー | 名物大エビフライ定食 |
-| 浜辺屋 | restaurant | 鳥羽市 | 伊勢海老料理 | https://www.google.com/maps/search/?api=1&query=浜辺屋+鳥羽市 | inbox | | 地域ガイド | 漁師直営、伊勢海老刺身・焼き物 |
+| 海の駅 黒潮ダイニング パールロード店 | restaurant | パールロード | 海鮮料理 | https://www.google.com/maps/search/?api=1&query=黒潮ダイニング+パールロード+鳥羽 | rejected | - | 食べログ3.49 | 伊勢海老入り海鮮丼 |
+| 漣（さざなみ）鳥羽店 | restaurant | 鳥羽市 | 海鮮料理 | https://www.google.com/maps/search/?api=1&query=漣+鳥羽店 | rejected | - | トリップアドバイザー | 名物大エビフライ定食 |
+| 浜辺屋 | restaurant | 鳥羽市 | 伊勢海老料理 | https://www.google.com/maps/search/?api=1&query=浜辺屋+鳥羽市 | rejected | - | 地域ガイド | 漁師直営、伊勢海老刺身・焼き物 |
 | 七越茶屋 | restaurant | 鳥羽市 | てこね寿司、伊勢うどん | https://www.google.com/maps/search/?api=1&query=七越茶屋+鳥羽市 | shortlisted | 41 | 食べログ3.45 | てこね寿司絶品、リーズナブル |
-| 漁師直営店 浜幸 | restaurant | 鳥羽市 | 海鮮丼、てこね寿司 | https://www.google.com/maps/search/?api=1&query=浜幸+鳥羽市 | inbox | | Retty | 限定ランチ |
-| すし梅 | restaurant | 鳥羽市 | 寿司 | https://www.google.com/maps/search/?api=1&query=すし梅+鳥羽市 | inbox | | Retty | 本格寿司、高鮮度 |
+| 漁師直営店 浜幸 | restaurant | 鳥羽市 | 海鮮丼、てこね寿司 | https://www.google.com/maps/search/?api=1&query=浜幸+鳥羽市 | rejected | - | Retty | 限定ランチ |
+| すし梅 | restaurant | 鳥羽市 | 寿司 | https://www.google.com/maps/search/?api=1&query=すし梅+鳥羽市 | rejected | - | Retty | 本格寿司、高鮮度 |
 | ○八食堂 | restaurant | 鳥羽駅2階 | 海鮮丼、定食 | https://www.google.com/maps/search/?api=1&query=○八食堂+鳥羽駅 | shortlisted | 42 | 食べログ3.46 | 駅直結で超便利、新鮮な海鮮 |
-| 海の駅 黒潮 相差店 | restaurant | 相差 | 海鮮丼 | https://www.google.com/maps/search/?api=1&query=海の駅+黒潮+相差店 | inbox | | 食べログ3.45 | 漁協直営 |
+| 海の駅 黒潮 相差店 | restaurant | 相差 | 海鮮丼 | https://www.google.com/maps/search/?api=1&query=海の駅+黒潮+相差店 | rejected | - | 食べログ3.45 | 漁協直営 |
 | 鳥羽国際ホテル カフェ&ラウンジ | cafe | 鳥羽湾 | カフェ、スイーツ | https://www.google.com/maps/search/?api=1&query=鳥羽国際ホテル+カフェ | shortlisted | 41 | 食べログ3.5+, じゃらん4.1 | 名物チーズケーキ、鳥羽湾絶景 |
-| MUSEA（ミュゼア） | cafe | 鳥羽駅前 | カフェ、自家焙煎珈琲 | https://www.google.com/maps/search/?api=1&query=MUSEA+鳥羽市 | inbox | | 地域ガイド | 海辺、テラス席 |
-| オウサツキッチン0032 | cafe | 相差町 | カフェ、スイーツ | https://www.google.com/maps/search/?api=1&query=オウサツキッチン0032+相差 | inbox | | 地域ガイド | 石神さん参道、天然てんぐさスイーツ |
-| ベイサイド | cafe | 海辺 | カフェ、ソフトクリーム | https://www.google.com/maps/search/?api=1&query=ベイサイド+鳥羽市 | inbox | | 食べログ | 海が見える席 |
-| 海女のテラス | cafe | パールロード | カフェ、ソフトクリーム | https://www.google.com/maps/search/?api=1&query=海女のテラス+鳥羽 | inbox | | 地域ガイド | 展望台、絶景 |
+| MUSEA（ミュゼア） | cafe | 鳥羽駅前 | カフェ、自家焙煎珈琲 | https://www.google.com/maps/search/?api=1&query=MUSEA+鳥羽市 | rejected | - | 地域ガイド | 海辺、テラス席 |
+| オウサツキッチン0032 | cafe | 相差町 | カフェ、スイーツ | https://www.google.com/maps/search/?api=1&query=オウサツキッチン0032+相差 | rejected | - | 地域ガイド | 石神さん参道、天然てんぐさスイーツ |
+| ベイサイド | cafe | 海辺 | カフェ、ソフトクリーム | https://www.google.com/maps/search/?api=1&query=ベイサイド+鳥羽市 | rejected | - | 食べログ | 海が見える席 |
+| 海女のテラス | cafe | パールロード | カフェ、ソフトクリーム | https://www.google.com/maps/search/?api=1&query=海女のテラス+鳥羽 | rejected | - | 地域ガイド | 展望台、絶景 |
 | LOBO（ロボ）＆ブランカ | dessert | 鳥羽市 | 洋菓子、カフェ | https://www.google.com/maps/search/?api=1&query=LOBO+ブランカ+鳥羽市 | shortlisted | 44 | 食べログ3.0+ | シェルレーヌ（G7サミット提供、受賞歴） |
 
 ## ステータス凡例
