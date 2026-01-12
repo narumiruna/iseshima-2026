@@ -54,6 +54,7 @@ gourmet/ - City food research data
   [city]/candidates.md - Candidate restaurants and ratings
   [city]/top-places.md - Final recommendation list
   [city]/excluded.md - Excluded places and reasons
+  [city]/notes.md - Detailed evidence and research notes
 ```
 
 Each city directory under `gourmet/` (e.g., `iseshi`, `matsusakashi`, `tobashi`, `shimashi`) MUST contain:
@@ -62,6 +63,7 @@ Each city directory under `gourmet/` (e.g., `iseshi`, `matsusakashi`, `tobashi`,
 - candidates.md - Candidate restaurants and ratings
 - top-places.md - Final recommendation list
 - excluded.md - Excluded places and reasons
+- notes.md - Detailed evidence and research notes
 
 Agents MUST respect this structure and naming.
 
@@ -95,7 +97,9 @@ overview.md       ← START HERE: Context, strategy, progress at a glance
     ↓
 top-places.md     ← ACTIONABLE: Final recommendations with scores
     ↓
-candidates.md     ← COMPLETE: All candidates with detailed evidence and ratings
+candidates.md     ← COMPLETE: All candidates with scores and status
+    ↓
+notes.md          ← EVIDENCE: Detailed research evidence and scoring rationale
     ↓
 excluded.md       ← REJECTED: What was considered and why it was excluded
 ```
@@ -103,16 +107,20 @@ excluded.md       ← REJECTED: What was considered and why it was excluded
 **Each file serves a distinct purpose**:
 - **overview.md**: Quick orientation (5-minute read) - City food strategy and progress
 - **top-places.md**: Decision-making (10-minute read, includes dining strategy) - Final recommendation list
-- **candidates.md**: Complete research (shows all candidates with scores, evidence, and status) - Candidate restaurants and ratings
+- **candidates.md**: Complete research (shows all candidates with scores and status) - Candidate restaurants and ratings
+- **notes.md**: Detailed evidence (research trail with sources, scoring rationale) - Detailed evidence and research notes
 - **excluded.md**: Audit trail (transparency, prevents re-research) - Excluded places and reasons
 
 #### Within-Document Disclosure
 
 **In candidates.md**:
 1. **Quick reference table at top** (name, category, area, type, google_maps_url, status, score) → quick scan
-2. **Detailed evidence sections per place** below the table → full research trail with sources
-3. **Scoring rationale** → justification for each score component
-4. **Practical information** → reservation, queues, closed days, etc.
+2. **Brief summary in notes column** → high-level overview per place
+
+**In notes.md**:
+1. **Detailed evidence sections per place** → full research trail with sources
+2. **Scoring rationale** → justification for each score component
+3. **Practical information** → reservation, queues, closed days, etc.
 
 **In top-places.md**:
 1. **Top Picks** first (35+ scores) → immediate action
@@ -421,6 +429,7 @@ Each entry MUST include:
 - area
 - total score (prominently displayed)
 - google maps link
+- tabelog link
 - one-line justification (why recommended)
 - constraints (reservation, queues, closed days, price level)
 
@@ -433,6 +442,15 @@ Each entry MUST include:
   - Place links: `https://www.google.com/maps/place/[Place+Name]`
 - Links MUST be tested/verified to point to the correct location
 - Generic placeholders like `[View Map]` without proper URLs are NOT acceptable
+
+**Tabelog Link Requirement**:
+- Every place in top-places.md MUST have a valid, working Tabelog (食べログ) link
+- Links MUST be actual URLs (not placeholders or generic text)
+- Acceptable format:
+  - Direct Tabelog links: `https://tabelog.com/[prefecture]/[area]/[area_code]/[restaurant_id]/`
+  - Example: `https://tabelog.com/mie/A2403/A240301/24000009/`
+- Links MUST be tested/verified to point to the correct restaurant
+- If a restaurant is not listed on Tabelog, note as "no tabelog listing" instead of omitting the field
 
 **Additional sections to include**:
 - Dining Strategy:
