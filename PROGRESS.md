@@ -54,7 +54,7 @@ Expected results for completed city:
 | 松阪市 (Matsusaka City) | ✅ Completed | 8 | All criteria met: Top Picks (5), Backups (3), all triaged | 2026-01-12 |
 | 鳥羽市 (Toba City) | ✅ Completed | 8 | All criteria met: Top Picks (7), Backup (1), all triaged, Dining Strategy complete | 2026-01-12 |
 | 志摩市 (Shima City) | ✅ Completed | 8 | All criteria met: Top Picks (6), Backups (2), all triaged,岩牡蠣9月旬確認, 2026-01-12 Tabelog高評価店追加調査完了 | 2026-01-12 |
-| 大阪市 (Osaka City) | 📝 In Progress | 0 | Initial setup complete, 23 candidates identified, detailed research pending | 2026-01-12 |
+| 大阪市 (Osaka City) | 🔄 Needs Finalization | 5 (provisional) | Top Picks (5), 5/23 candidates researched and scored, Dining Strategy established, needs more research | 2026-01-12 |
 
 ## Research Timeline
 
@@ -66,6 +66,7 @@ Expected results for completed city:
 - **2026-01-12**: Completed research on 志摩市 (Shima City) - 4 Top Picks + 1 Backup, 岩牡蠣9月旬確認
 - **2026-01-12**: Enhanced 志摩市 research with Tabelog top-ranked restaurants - added 2 Top Picks (フレンチ, うなぎ) + 1 Backup, now 6 Top Picks + 2 Backups (8 total)
 - **2026-01-12**: Started research on 大阪市 (Osaka City) - Initial setup complete, 23 candidates identified
+- **2026-01-12**: Osaka City research progress - 5 Top Picks identified (たこ焼道楽 わなか 42/50, 本湖月 38/50, 道頓堀 今井 37/50, 美津の 35/50, 串かつだるま 35/50), Dining Strategy established
 
 ---
 
