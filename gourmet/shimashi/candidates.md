@@ -11,7 +11,7 @@
 | 賢島グランドホテル | restaurant | 賢島 | 海鮮丼 | https://www.google.com/maps/search/?api=1&query=賢島グランドホテル | rejected | - | 食べログ3.02 | 食事のみ利用可 |
 | 網元の店 八代 | restaurant | 英虞湾 | 海鮮料理、活造り | https://www.google.com/maps/search/?api=1&query=網元の店+八代+志摩市 | inbox | - | 食べログ3.52 | 分厚い海鮮丼、地元客に人気、売り切れ次第終了 |
 | 日本料理 鯛（たい） | restaurant | 志摩市 | 日本料理 | https://www.google.com/maps/search/?api=1&query=日本料理+鯛+志摩市 | rejected | - | 地域ガイド | ランチ人気 |
-| ラ・メール ザ クラシック | restaurant | 志摩観光ホテル | フレンチ、海鮮 | https://www.google.com/maps/search/?api=1&query=ラ・メール+志摩観光ホテル | inbox | - | 食べログ4.08 | 志摩観光ホテル内本格フレンチ、景色と料理が最高 |
+| ラ・メール ザ クラシック | restaurant | 志摩観光ホテル | フレンチ、海鮮 | https://www.google.com/maps/search/?api=1&query=ラ・メール+志摩観光ホテル | shortlisted | 43 | 食べログ4.08 | 志摩観光ホテル内本格フレンチ、景色と料理が最高 |
 | 鮨暁 | restaurant | 志摩神明 | 寿司 | https://www.google.com/maps/search/?api=1&query=鮨暁+志摩市 | inbox | - | 食べログ3.52 | 地元ならではの新鮮な寿司、予約推奨 |
 | まごろく | restaurant | 志摩市 | 居酒屋 | https://www.google.com/maps/search/?api=1&query=まごろく+志摩市 | rejected | - | じゃらん | 旬の食材 |
 | いかだ荘 山上 | restaurant | 的矢湾 | 的矢かき料理 | https://www.google.com/maps/search/?api=1&query=いかだ荘+山上+志摩市 | shortlisted | 38 | 食べログ3.54, じゃらん4.2 | 牡蠣づくしコース、料理旅館、ランチ¥3,800～ |
@@ -24,9 +24,9 @@
 | カフェ＆ワインバー リアン | cafe | 志摩観光ホテル | カフェ、アフタヌーンティー | https://www.google.com/maps/search/?api=1&query=カフェ+リアン+志摩観光ホテル | rejected | - | 地域ガイド | 高級、英虞湾眺望 |
 | お菓子職人 おとべ | dessert | 志摩市 | スイーツ | https://www.google.com/maps/search/?api=1&query=お菓子職人+おとべ+志摩市 | rejected | - | じゃらん | シュークリーム、イートイン |
 | アベック モンクール | dessert | 志摩市 | スイーツ | https://www.google.com/maps/search/?api=1&query=アベック+モンクール+志摩市 | rejected | - | じゃらん | ミルクレープ、かき氷 |
-| ラ・メール | restaurant | 志摩観光ホテル | フレンチ、海鮮 | https://www.google.com/maps/search/?api=1&query=ラ・メール+志摩観光ホテル | inbox | - | 食べログ4.07 | 伊勢志摩サミットで使用された本格フレンチ |
-| 炭火焼うなぎ 東山物産 | restaurant | 鵜方 | うなぎ | https://www.google.com/maps/search/?api=1&query=炭火焼うなぎ+東山物産+志摩市 | inbox | - | 食べログ3.75 | うなぎ百名店、関西風パリッと焼き、予約必須 |
-| アマネム | restaurant | 賢島 | 料理旅館、和会席 | https://www.google.com/maps/search/?api=1&query=アマネム+賢島 | inbox | - | 食べログ3.74 | 和モダン高級旅館、地元食材の特別な和会席 |
+| ラ・メール | restaurant | 志摩観光ホテル | フレンチ、海鮮 | https://www.google.com/maps/search/?api=1&query=ラ・メール+志摩観光ホテル | shortlisted | 43 | 食べログ4.07 | 伊勢志摩サミットで使用された本格フレンチ |
+| 炭火焼うなぎ 東山物産 | restaurant | 鵜方 | うなぎ | https://www.google.com/maps/search/?api=1&query=炭火焼うなぎ+東山物産+志摩市 | shortlisted | 42 | 食べログ3.75 | うなぎ百名店、関西風パリッと焼き、予約必須 |
+| アマネム | restaurant | 賢島 | 料理旅館、和会席 | https://www.google.com/maps/search/?api=1&query=アマネム+賢島 | shortlisted | 34 | 食べログ3.74 | 和モダン高級旅館、地元食材の特別な和会席 |
 | THE HIRAMATSU HOTELS&RESORTS 賢島 | restaurant | 賢島 | ホテルレストラン、コース料理 | https://www.google.com/maps/search/?api=1&query=THE+HIRAMATSU+HOTELS+賢島 | inbox | - | 食べログ3.71 | 贅沢なコース料理、特別な朝食・ディナー |
 | 天ぷら とばり | restaurant | 鵜方 | 天ぷら | https://www.google.com/maps/search/?api=1&query=天ぷら+とばり+志摩市 | inbox | - | 食べログ3.66 | 地元食材の旬天ぷら、上質空間 |
 | 汀渚 ばさら邸 | restaurant | 賢島 | 料理旅館 | https://www.google.com/maps/search/?api=1&query=汀渚+ばさら邸+賢島 | inbox | - | 食べログ3.60 | 記念日・家族旅行、特別プラン、朝食人気 |
