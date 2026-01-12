@@ -15,8 +15,8 @@
 |------|-----------|-----------|--------|
 | 伊勢市 | ✅ 完了 | 8 | Top Picks 7, Backup 1 |
 | 松阪市 | ✅ 完了 | 8 | Top Picks 5 (レストラン3+デザート2), Backup 3 |
-| 鳥羽市 | ⏳ 未開始 | 0 | - |
-| 志摩市 | ⏳ 未開始 | 0 | - |
+| 鳥羽市 | 📝 進行中 | 3 | Top Picks 3店舗研究完了（華月 42pt, 魚々味 40pt, はまなみ 38pt） |
+| 志摩市 | 📝 進行中 | 0 | 候補22店舗収集済み、詳細調査中 |
 
 詳細は [PROGRESS.md](PROGRESS.md) を参照
 
@@ -29,6 +29,7 @@ gourmet/
     candidates.md  - 候補店舗リスト
     top-places.md  - 最終推薦リスト
     excluded.md    - 除外店舗と理由
+    notes.md       - 詳細調査ノート
   matsusakashi/    - 松阪市のグルメ調査
   tobashi/         - 鳥羽市のグルメ調査
   shimashi/        - 志摩市のグルメ調査

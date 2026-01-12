@@ -50,8 +50,8 @@ Expected results for completed city:
 |------|--------|-----------------|-------|--------------|
 | 伊勢市 (Ise City) | ✅ Completed | 8 | All criteria met: Top Picks (7), Backup (1), all triaged | 2026-01-12 |
 | 松阪市 (Matsusaka City) | ✅ Completed | 8 | All criteria met: Top Picks (5), Backups (3), all triaged | 2026-01-12 |
-| 鳥羽市 (Toba City) | ⏳ Not Started | 0 | - | - |
-| 志摩市 (Shima City) | ⏳ Not Started | 0 | - | - |
+| 鳥羽市 (Toba City) | 📝 In Progress | 3 | Top Picks researched (華月 42pt, 魚々味 40pt, はまなみ 38pt), 19 candidates total | 2026-01-12 |
+| 志摩市 (Shima City) | 📝 In Progress | 0 | Initial candidates collected (22 places), research in progress | 2026-01-12 |
 
 ## Research Timeline
 
@@ -59,6 +59,8 @@ Expected results for completed city:
 - **2026-01-12**: Completed research on 伊勢市 (Ise City)
 - **2026-01-12**: Started research on 松阪市 (Matsusaka City)
 - **2026-01-12**: Completed research on 松阪市 (Matsusaka City) - 5 restaurants + 3 dessert shops
+- **2026-01-12**: Started research on 鳥羽市 (Toba City) - Initial candidates collected (19 places)
+- **2026-01-12**: Started research on 志摩市 (Shima City) - Initial candidates collected (22 places)
 
 ---
 
