@@ -22,6 +22,7 @@ This document defines the complete research methodology for evidence-based gourm
 - 松阪市 (Matsusaka City)
 - 鳥羽市 (Toba City)
 - 志摩市 (Shima City)
+- 大阪市 (Osaka City) - *Extended scope as of 2026-01-12*
 
 **Categories Covered**:
 - Restaurants (all cuisine types)
@@ -42,7 +43,7 @@ This document defines the complete research methodology for evidence-based gourm
 - Non-food activities or attractions
 - Shopping (unless food-related)
 - Nightlife (bars, clubs) unless food-focused
-- Cities outside the four target areas
+- Cities outside the five target areas
 
 **Fixed Constraints** (not modifiable by research):
 - Travel dates: 2026-09-25 to 2026-10-04
@@ -187,6 +188,7 @@ gourmet/
 - `matsusakashi` (松阪市)
 - `tobashi` (鳥羽市)
 - `shimashi` (志摩市)
+- `osakashi` (大阪市)
 
 ### File Purposes and Reading Sequence
 

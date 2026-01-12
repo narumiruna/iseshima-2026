@@ -13,8 +13,9 @@
 | **松阪市** | 8店舗 | [→ Top Picks](gourmet/matsusakashi/top-places.md) | [📋 概要](gourmet/matsusakashi/overview.md) |
 | **鳥羽市** | 8店舗 | [→ Top Picks](gourmet/tobashi/top-places.md) | [📋 概要](gourmet/tobashi/overview.md) |
 | **志摩市** | 8店舗 | [→ Top Picks](gourmet/shimashi/top-places.md) | [📋 概要](gourmet/shimashi/overview.md) |
+| **大阪市** | 調査中 | [→ Top Picks](gourmet/osakashi/top-places.md) | [📋 概要](gourmet/osakashi/overview.md) |
 
-**📊 合計**: 32店舗（Top Picks 25店舗 + Backups 7店舗）
+**📊 合計**: 32店舗（Top Picks 25店舗 + Backups 7店舗）+ 大阪市調査中
 
 ### 調査者・プランナー向け（詳細を確認したい）
 - **調査進捗の確認**: [PROGRESS.md](PROGRESS.md) - 調査状況の詳細トラッキング
@@ -56,6 +57,12 @@
 - **カフェ**: ラ・メール ブラッスリー
 - **和食**: はまきん（海鮮料理）
 - **的矢かき**: 丸善水産、中山牡蠣養殖所
+
+### 大阪市（調査中）
+- **大阪名物**: たこ焼き、お好み焼き、串カツなど「食い倒れの街」を代表する料理
+- **高級レストラン**: 食べログ4.0以上の名店多数、ミシュラン星付き店も充実
+- **多様なジャンル**: 日本料理、寿司、フレンチ、中華、イノベーティブなど幅広い選択肢
+- **カフェ・スイーツ**: SNS映えする人気店、トレンド発信地
 
 ---
 
