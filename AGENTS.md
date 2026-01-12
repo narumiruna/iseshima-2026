@@ -309,10 +309,11 @@ For each candidate promoted to research:
 3. Extract key information systematically
 4. Document full evidence in notes.md, update candidates.md table with status and brief summary
 
-**Tabelog Ranking Search**:
-- **Always check for Tabelog rankings**: Search for "食べログ百名店 [cuisine type] [city/prefecture]" or "[Restaurant Name] 食べログ百名店"
-- **百名店 (Hyakumeiten)**: Tabelog's annual "Top 100" lists by category (e.g., うどん百名店, 海鮮百名店, カフェ百名店)
-  - Being listed indicates exceptional quality and local/expert recognition
+**Tabelog 百名店 (Hyakumeiten) Search**:
+- **Always check for 百名店 status**: Search for "食べログ百名店 [cuisine type] [city/prefecture]" or "[Restaurant Name] 食べログ百名店"
+- **百名店 (Hyakumeiten)**: Tabelog's annual award for "Top 100" restaurants by category (e.g., うどん百名店, 海鮮百名店, カフェ百名店)
+  - This is DIFFERENT from regular Tabelog score rankings (which update monthly)
+  - Being listed indicates exceptional quality and sustained user support
   - Lists are updated annually, so check for the most recent year
   - Example searches: "食べログ百名店 うどん 三重", "食べログ百名店 海鮮 伊勢"
 - **How to use this information**:
