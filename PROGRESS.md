@@ -18,6 +18,8 @@ A city is marked "✅ Completed" when ALL of the following are met:
 3. **top-places.md finalized**: Contains Top Picks, Backups, Dining Strategy, and To-Do sections
 4. **overview.md checklist complete**: All checklist items marked `[x]`
 
+**Important Note**: The To-Do section in top-places.md is a **trip execution checklist** for travelers (reservations, confirmations, etc.). It is NOT part of the research completion criteria and MAY contain unchecked items `[ ]` even when research is marked complete. The **research completion** is tracked by the overview.md checklist only.
+
 ## Verification Commands
 
 To verify completion for a city, run:

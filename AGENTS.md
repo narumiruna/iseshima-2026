@@ -41,6 +41,19 @@ For detailed completion criteria, status definitions, and verification checklist
   3. top-places.md finalized (Top Picks, Backups, Dining Strategy, To-Do)
   4. overview.md checklist fully checked `[x]`
 
+**Important Distinction - Two Types of Checklists:**
+
+1. **Research Completion Checklist** (overview.md):
+   - Tracks research progress (data collection, analysis, documentation)
+   - MUST be 100% checked `[x]` for city to be marked "✅ Completed"
+   - Managed by research agents
+
+2. **Trip Execution Checklist** (top-places.md To-Do section):
+   - Tracks trip planning and execution tasks (reservations, confirmations)
+   - MAY contain unchecked items `[ ]` even when research is complete
+   - Used by travelers for trip preparation
+   - NOT part of research completion criteria
+
 **Status Indicators:**
 - ⏳ Not Started → 📝 In Progress → 🔄 Needs Finalization → ✅ Completed
 
@@ -474,10 +487,16 @@ Each entry MUST include:
   - Reservation strategy (which places need booking, how far in advance)
   - Budget allocation (price ranges per category)
   - Transportation from hotel (how to reach different areas)
-- To-Do:
-  - Confirm closed days
-  - Make reservations (with timing)
-  - Plan daily dining schedule
+- To-Do (Trip Execution Checklist):
+  - **Purpose**: Action items for travelers during trip planning phase
+  - **Scope**: Reservations, confirmations, day-of logistics
+  - **Status**: May contain unchecked items `[ ]` even when research is complete
+  - **Note**: This is SEPARATE from research completion (overview.md checklist)
+  - Include items like:
+    - [ ] Research completion tasks (mark these as `[x]` when research done)
+    - [ ] Reservation tasks (for trip planning, can remain `[ ]`)
+    - [ ] Information confirmation tasks (for trip planning, can remain `[ ]`)
+    - [ ] Day-of preparation tasks (for trip execution, can remain `[ ]`)
 
 ---
 
