@@ -28,6 +28,12 @@ All recommendations must be:
 - Auditable (decisions and exclusions recorded)
 - Actionable (clear top picks and backups)
 
+**🚀 Quick Start for New Agents:**
+1. Read [Research Completion Standard](#research-completion-standard) below
+2. Review [Required Repository Structure](#required-repository-structure-per-city)
+3. Follow [Workflow (Must Follow)](#workflow-must-follow) step-by-step
+4. Use [Process Improvements](#process-improvements-lessons-learned) for efficiency tips
+
 ---
 
 ## Research Completion Standard
@@ -43,16 +49,12 @@ For detailed completion criteria, status definitions, and verification checklist
 
 **Important Distinction - Two Types of Checklists:**
 
-1. **Research Completion Checklist** (overview.md):
-   - Tracks research progress (data collection, analysis, documentation)
-   - MUST be 100% checked `[x]` for city to be marked "✅ Completed"
-   - Managed by research agents
+| Checklist Type | Purpose | Location | Completion Requirement |
+|---------------|---------|----------|----------------------|
+| **Research Completion** | Track research progress (data collection, analysis) | overview.md | **MUST be 100% `[x]` for ✅ status** |
+| **Trip Execution** | Track trip planning (reservations, confirmations) | top-places.md To-Do | **MAY have `[ ]` items when research complete** |
 
-2. **Trip Execution Checklist** (top-places.md To-Do section):
-   - Tracks trip planning and execution tasks (reservations, confirmations)
-   - MAY contain unchecked items `[ ]` even when research is complete
-   - Used by travelers for trip preparation
-   - NOT part of research completion criteria
+⚠️ **Critical**: Only the **Research Completion Checklist** determines if a city is marked ✅. The Trip Execution checklist is for travelers and NOT part of research completion criteria.
 
 **Status Indicators:**
 - ⏳ Not Started → 📝 In Progress → 🔄 Needs Finalization → ✅ Completed
@@ -123,6 +125,16 @@ excluded.md       ← REJECTED: What was considered and why it was excluded
 - **candidates.md**: Complete research (shows all candidates with scores and status) - Candidate restaurants and ratings
 - **notes.md**: Detailed evidence (research trail with sources, scoring rationale) - Detailed evidence and research notes
 - **excluded.md**: Audit trail (transparency, prevents re-research) - Excluded places and reasons
+
+**📝 When to Use Which File:**
+| Task | Use This File | What to Add |
+|------|--------------|-------------|
+| Starting research | overview.md | City context, strategy, checklist |
+| Adding new candidates | candidates.md | Table row with basic info |
+| Deep research | notes.md | Evidence sections with sources |
+| Scoring a place | notes.md + candidates.md | Score breakdown in notes, score in table |
+| Rejecting a place | excluded.md + candidates.md | Reason in excluded, status:rejected in table |
+| Final recommendations | top-places.md | Top Picks, Backups, Dining Strategy |
 
 #### Within-Document Disclosure
 
@@ -222,48 +234,47 @@ excluded.md → Find place → Read reason → (Optional: check notes.md for ful
 
 ## Workflow (Must Follow)
 
+**📋 Workflow Overview:**
+```
+0. Initialize     → Create overview.md, gather initial candidates
+1. Discovery      → Add candidates to candidates.md table
+2. Evidence       → Deep-dive research per place in notes.md
+3. Scoring        → Apply 50-point rubric consistently
+4. Triage         → Mark rejected, document in excluded.md
+5. Final Output   → Populate top-places.md with Top Picks
+6. Post-Research  → Update PROGRESS.md and README.md
+```
+
 ### 0 Initialize City Research
 
 When starting research for a new city:
 
 1. **Create overview.md first** with:
    - Travel dates and accommodation
-   - Food highlights specific to the city (e.g., Roman pasta, Viennese schnitzel)
+   - Food highlights specific to the city (e.g., 伊勢うどん for Ise, 松阪牛 for Matsusaka)
    - Research strategy and priorities
    - Current progress checklist
    - Important notes (business hours, holidays, transportation from hotel)
 
 2. **Use web_search to gather initial candidates**:
-   - Search for "best [city cuisine] restaurants [year]"
-   - Search for specific dishes (e.g., "best carbonara Rome")
-   - Search for "best pizza/gelato/dessert in [city]"
+   - Search for "best [city cuisine] restaurants [year]" (e.g., "best 伊勢うどん restaurants 2026")
+   - Search for specific dishes (e.g., "best 伊勢海老 restaurants Ise")
+   - Search for "best [category] in [city]" (e.g., "best dessert cafes 志摩市")
    - Focus on recent guides (2024-2026) and local recommendations
 
 3. **Batch similar searches** to save time:
-   - Do one search for restaurants
-   - One search for pizza/casual dining
-   - One search for desserts/gelato
+   - One search for main restaurants by cuisine type
+   - One search for casual dining/local specialties
+   - One search for desserts/cafes
 
 ---
 
 ### 1 Discovery — Candidate Collection
 
 - Search broadly for food, coffee, and dessert places in the city.
-- Record raw findings in:
-  - inbox.md (unstructured, fast capture with quick notes)
-  - and/or candidates.md (structured table)
+- Record findings directly in **candidates.md** structured table.
 
-**inbox.md structure recommendation**:
-```
-## カテゴリー (e.g., すき焼き)
-1. **店舗名**
-   - 所在地：エリア
-   - 特徴：代表的な料理／独自の特徴
-   - 注意点：制約事項
-   - 情報源：情報源の種類
-```
-
-Minimum fields per candidate in candidates.md table:
+**Required fields per candidate in candidates.md table:**
 - name
 - category (restaurant | cafe | dessert)
 - area / neighborhood
@@ -277,7 +288,7 @@ Minimum fields per candidate in candidates.md table:
 
 **⚠️ CRITICAL: Preserving candidates.md Table Entries**
 
-**DO NOT delete or remove entries from the candidates.md summary table** unless absolutely necessary for one of the following reasons:
+**🚫 DO NOT delete or remove entries from the candidates.md summary table** unless absolutely necessary for one of the following reasons:
 
 **Acceptable reasons to modify/remove table entries:**
 1. **Duplicate entries**: Same restaurant appears multiple times in table (merge into one entry with combined information)
@@ -316,11 +327,19 @@ For each candidate promoted to research:
 - Update the candidates.md table row with brief summary in notes column.
 - Summarize evidence from multiple independent sources.
 
-**Efficient research pattern**:
-1. Use web_search with specific queries: "[Restaurant Name] [City] 食べログ 予約 口コミ"
-2. One search often provides Google Maps rating, 食べログ reviews, and Google口コミ together
-3. Extract key information systematically
-4. Document full evidence in notes.md, update candidates.md table with status and brief summary
+**🔍 Efficient web_search Pattern:**
+1. **Single comprehensive query**: "[Restaurant Name] [City] 食べログ 予約 口コミ"
+   - Often returns Google Maps rating, 食べログ reviews, and Google口コミ together
+   - Example: "にかわ 伊勢市 食べログ 予約 口コミ"
+2. **Extract systematically**: Rating, review count, price range, reservation info, recurring comments
+3. **Document in notes.md**: Full evidence with sources
+4. **Update candidates.md**: Status and brief summary only
+
+**💡 Pro Tips:**
+- One good search > multiple weak searches
+- Look for patterns across multiple review sources
+- Note conflicting information (e.g., "some say long wait, others say quick service")
+- Always include actual URLs in notes.md sources section
 
 **Tabelog Ranking (食べログランキング)**:
 - **Always check Tabelog ranking**: Search for "[City] [cuisine type] 食べログ ランキング" or check the restaurant's Tabelog page for its score and area ranking
@@ -400,19 +419,30 @@ Rules:
 
 Each researched place MUST include a 50-point total score:
 
-- Taste / Quality (0–10): Food quality, authenticity, execution
-- Value (0–10): Price vs quality, portion size
-- Convenience (0–10): Location, ease of reservation/access, opening hours
-- Consistency (0–10): Reliability across reviews, time, visits
-- Risk (0–10; 10 = low risk): Likelihood of disappointment, queue uncertainty, service issues
+| Category | Points | What to Evaluate |
+|----------|--------|------------------|
+| **Taste / Quality** | 0–10 | Food quality, authenticity, execution |
+| **Value** | 0–10 | Price vs quality, portion size |
+| **Convenience** | 0–10 | Location, ease of reservation/access, opening hours |
+| **Consistency** | 0–10 | Reliability across reviews, time, visits |
+| **Risk** | 0–10 | 10 = low risk; Likelihood of disappointment, queue uncertainty, service issues |
 
 **Scoring guidelines**:
-- 40+ = excellent, highly recommended
-- 35-39 = very good, solid choice
-- 30-34 = good, acceptable backup
-- <30 = consider exclusion
+- **40-50** = excellent, highly recommended (Top Pick)
+- **35-39** = very good, solid choice (Top Pick)
+- **30-34** = good, acceptable backup (Backup)
+- **<30** = consider exclusion (document reason in excluded.md)
 
-Also record:
+**💡 Scoring Example (にかわ - 42/50):**
+```
+- Taste/Quality: 10/10 (食べログ4.00, 百名店3年連続, 備長炭焼き)
+- Value: 7/10 (¥15,000-20,000 but exceptional quality)
+- Convenience: 6/10 (完全予約制, 18:00一斉スタート, 遅刻厳禁)
+- Consistency: 10/10 (百名店, 高評価継続, サービス安定)
+- Risk: 9/10 (予約必須, キャンセルポリシー厳格, but確実な品質)
+```
+
+**Also record practical constraints:**
 - reservation requirement (required | recommended | optional | none | unknown)
 - best visiting time (specific times or "off-peak", etc.)
 - closed days (especially Sunday/Monday)
@@ -462,21 +492,18 @@ Each entry MUST include:
 - one-line justification (why recommended)
 - constraints (reservation, queues, closed days, price level)
 
-**Google Maps Link Requirement**:
-- Every place in top-places.md MUST have a valid, working Google Maps link
-- Links MUST be actual URLs (not placeholders or generic text)
-- Links MUST be Direct Google Maps links: `https://maps.app.goo.gl/...`
-- Links MUST be tested/verified to point to the correct location
-- Generic placeholders like `[View Map]` without proper URLs are NOT acceptable
+**🔗 Google Maps Link Requirement:**
+- ✅ **MUST have**: Valid, working Google Maps link
+- ✅ **Format**: Direct links `https://maps.app.goo.gl/...` or search links `https://www.google.com/maps/search/?api=1&query=...`
+- ✅ **Verified**: Test link points to correct location
+- ❌ **NOT acceptable**: Placeholders like `[View Map]` without URLs
 
-**Tabelog Link Requirement**:
-- Every place in top-places.md MUST have a valid, working Tabelog (食べログ) link
-- Links MUST be actual URLs (not placeholders or generic text)
-- Acceptable format:
-  - Direct Tabelog links: `https://tabelog.com/[prefecture]/[area]/[area_code]/[restaurant_id]/`
+**🔗 Tabelog Link Requirement:**
+- ✅ **MUST have**: Valid Tabelog (食べログ) link
+- ✅ **Format**: `https://tabelog.com/[prefecture]/[area]/[area_code]/[restaurant_id]/`
   - Example: `https://tabelog.com/mie/A2403/A240301/24000009/`
-- Links MUST be tested/verified to point to the correct restaurant
-- If a restaurant is not listed on Tabelog, note as "no tabelog listing" instead of omitting the field
+- ✅ **Verified**: Test link points to correct restaurant
+- ⚠️ **If not listed**: Note as "no tabelog listing" instead of omitting field
 
 **Additional sections to include**:
 - Dining Strategy:
