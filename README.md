@@ -13,9 +13,9 @@
 | **松阪市** | 8店舗 | [→ Top Picks](gourmet/matsusakashi/top-places.md) | [📋 概要](gourmet/matsusakashi/overview.md) |
 | **鳥羽市** | 8店舗 | [→ Top Picks](gourmet/tobashi/top-places.md) | [📋 概要](gourmet/tobashi/overview.md) |
 | **志摩市** | 8店舗 | [→ Top Picks](gourmet/shimashi/top-places.md) | [📋 概要](gourmet/shimashi/overview.md) |
-| **大阪市** | 調査中 | [→ Top Picks](gourmet/osakashi/top-places.md) | [📋 概要](gourmet/osakashi/overview.md) |
+| **大阪市** | 11店舗 | [→ Top Picks](gourmet/osakashi/top-places.md) | [📋 概要](gourmet/osakashi/overview.md) |
 
-**📊 合計**: 32店舗（Top Picks 25店舗 + Backups 7店舗）+ 大阪市調査中
+**📊 合計**: 43店舗（Top Picks 31店舗 + Backups 12店舗）
 
 ### 調査者・プランナー向け（詳細を確認したい）
 - **調査進捗の確認**: [PROGRESS.md](PROGRESS.md) - 調査状況の詳細トラッキング
@@ -58,11 +58,14 @@
 - **和食**: はまきん（海鮮料理）
 - **的矢かき**: 丸善水産、中山牡蠣養殖所
 
-### 大阪市（調査中）
-- **大阪名物**: たこ焼き、お好み焼き、串カツなど「食い倒れの街」を代表する料理
-- **高級レストラン**: 食べログ4.0以上の名店多数、ミシュラン星付き店も充実
-- **多様なジャンル**: 日本料理、寿司、フレンチ、中華、イノベーティブなど幅広い選択肢
-- **カフェ・スイーツ**: SNS映えする人気店、トレンド発信地
+### 大阪市（Top Picks 6店舗、Backups 5店舗）
+- **たこ焼き**: たこ焼道楽 わなか（42点、4種類の味、年中無休）、くくる（36点、Backup）
+- **お好み焼き**: きじ 本店（38点、百名店）、福太郎（38点、ねぎ焼き名物）、味乃家（36点、Backup）、美津の（35点、Backup）
+- **日本料理**: 本湖月（38点、ミシュラン二つ星、食べログ4.58）
+- **イノベーティブ**: ハジメ（38点、ミシュラン三つ星）
+- **寿司**: 鮨 三心（36点、Backup、食べログ4.56、超予約困難）
+- **うどん**: 道頓堀 今井（37点、昭和21年創業）
+- **串カツ**: 串かつだるま（35点、Backup、新世界の代表格）
 
 ---
 
