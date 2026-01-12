@@ -54,6 +54,7 @@ gourmet/ - City food research data
   [city]/candidates.md - Candidate restaurants and ratings
   [city]/top-places.md - Final recommendation list
   [city]/excluded.md - Excluded places and reasons
+  [city]/notes.md - Detailed evidence and research notes
 ```
 
 Each city directory under `gourmet/` (e.g., `iseshi`, `matsusakashi`, `tobashi`, `shimashi`) MUST contain:
@@ -62,6 +63,7 @@ Each city directory under `gourmet/` (e.g., `iseshi`, `matsusakashi`, `tobashi`,
 - candidates.md - Candidate restaurants and ratings
 - top-places.md - Final recommendation list
 - excluded.md - Excluded places and reasons
+- notes.md - Detailed evidence and research notes
 
 Agents MUST respect this structure and naming.
 
