@@ -465,10 +465,7 @@ Each entry MUST include:
 **Google Maps Link Requirement**:
 - Every place in top-places.md MUST have a valid, working Google Maps link
 - Links MUST be actual URLs (not placeholders or generic text)
-- Acceptable formats:
-  - Direct Google Maps links: `https://maps.app.goo.gl/...`
-  - Search API links: `https://www.google.com/maps/search/?api=1&query=[Place+Name+City]`
-  - Place links: `https://www.google.com/maps/place/[Place+Name]`
+- Links MUST be Direct Google Maps links: `https://maps.app.goo.gl/...`
 - Links MUST be tested/verified to point to the correct location
 - Generic placeholders like `[View Map]` without proper URLs are NOT acceptable
 
