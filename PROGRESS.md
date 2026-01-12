@@ -48,7 +48,7 @@ Expected results for completed city:
 
 | City | Status | Recommendations | Notes | Last Updated |
 |------|--------|-----------------|-------|--------------|
-| 伊勢市 (Ise City) | ✅ Completed | 7 | All criteria met: Top Picks (6), Backup (1), all triaged | 2026-01-12 |
+| 伊勢市 (Ise City) | ✅ Completed | 8 | All criteria met: Top Picks (7), Backup (1), all triaged | 2026-01-12 |
 | 松阪市 (Matsusaka City) | ✅ Completed | 8 | All criteria met: Top Picks (5), Backups (3), all triaged | 2026-01-12 |
 | 鳥羽市 (Toba City) | ⏳ Not Started | 0 | - | - |
 | 志摩市 (Shima City) | ⏳ Not Started | 0 | - | - |
